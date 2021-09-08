@@ -1,11 +1,14 @@
 <template>
-  <v-container>
-    Home
+  <v-container fluid>
+    <my-intro />
   </v-container>
 </template>
 
 <script>
-export default {};
+import MyIntro from "./MyIntro.vue";
+export default {
+  components: { MyIntro },
+};
 </script>
 
 <style></style>

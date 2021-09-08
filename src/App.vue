@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <app-bar />
     <v-main>
+      <app-bar />
       <router-view />
     </v-main>
   </v-app>
@@ -18,3 +18,13 @@ export default {
   }),
 };
 </script>
+
+<style lang="scss">
+main {
+  // background-color: $backgroundColor;
+  font-family: "Montserrat", "Poppins", "Quicksand", sans-serif;
+  background-color: black;
+  color: #fff;
+  width: 100%;
+}
+</style>

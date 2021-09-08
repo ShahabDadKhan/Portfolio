@@ -1,15 +1,32 @@
-$colors: (
-  primary: #333333,
-  secondary: #2b2b2b,
-  white: #ffffff,
-  orange: #fc6d2b,
-  darkgrey: #707070,
-  complete: #2bfc83,
-  inprogress: #ffb936,
-  incomplete: #ff1212,
-  lightgrey: #cacaca,
-);
+// $colors: (
+//   primary: #333333,
+//   secondary: #2b2b2b,
+//   text: #575757,
+//   white: #ffffff,
+//   orange: #fc6d2b,
+//   darkgrey: #707070,
+//   complete: #2bfc83,
+//   inprogress: #ffb936,
+//   incomplete: #ff1212,
+//   lightgrey: #cacaca,
+// );
 
+// Colors
+
+$primary: #333333;
+$secondary: #2b2b2b;
+$text: #575757;
+$white: #ffffff;
+$yellow: #ffc800;
+$orange: #fc6d2b;
+$darkgrey: #707070;
+$complete: #2bfc83;
+$inprogress: #ffb936;
+$incomplete: #ff1212;
+$lightgrey: #cacaca;
+$backgroundColor: black;
+
+// Mixins
 @mixin infobox_mixin(
   $border-radius,
   $border-color,

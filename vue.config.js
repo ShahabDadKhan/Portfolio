@@ -1,5 +1,10 @@
 module.exports = {
-  transpileDependencies: [
-    'vuetify'
-  ]
-}
+  css: {
+    loaderOptions: {
+      scss: {
+        additionalData: `@import "./src/sass/variable.scss";`,
+      },
+    },
+  },
+  transpileDependencies: ["vuetify"],
+};
