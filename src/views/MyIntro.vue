@@ -17,7 +17,7 @@
         </p>
         <div class="home-text-2 d-flex">
           A
-          <ul class="dynamic-text pl-1">
+          <ul class="dynamic-text pl-1 mr-1">
             <li>
               <span>Self-Taught</span>
             </li>
@@ -122,7 +122,7 @@ ul {
 ul li {
   position: relative;
   top: 0;
-  animation: slide 3s steps(3) infinite;
+  animation: slide 4s steps(3) infinite;
 }
 
 @keyframes slide {
