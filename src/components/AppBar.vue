@@ -8,15 +8,22 @@
       color="black"
     >
       <v-row>
-        <v-col class="f1" offset-sm="1" md="1" sm="2" cols="10">
-          <router-link to="/" class="links f1">
-            Portfolio
-          </router-link>
+        <v-col offset-sm="1" md="1" sm="2" cols="2">
+          <!-- <router-link to="/"> -->
+          <a href="#my-intro" v-smooth-scroll>
+            <div style="width:70px; height:70px" class="links">
+              <v-img
+                max-height="100%"
+                max-width="100%"
+                src="../assets/Img/SDK-blackSmall.jpg"
+              ></v-img>
+            </div>
+          </a>
+          <!-- </router-link> -->
         </v-col>
 
         <v-col
           v-show="!mobile"
-          align-self="start"
           class="f2"
           offset-sm="1"
           offset-md="3"
@@ -26,21 +33,26 @@
           sm="8"
           cols="12"
         >
-          <router-link to="/" class="links">
+          <!-- <router-link to="/about-me" v-smooth-scroll class="links">
             ABOUT ME
-          </router-link>
+          </router-link> -->
+          <a href="#about-me" v-smooth-scroll class="links"> ABOUT ME</a>
+          <a href="#my-portfolio" v-smooth-scroll class="links"> PORTFOLIO</a>
+          <a href="#contect-me" v-smooth-scroll class="links"> CONTACT</a>
+          <a href="#" v-smooth-scroll class="links"> SIGN IN</a>
+
           <!-- <router-link to="/blogs" class="links">
             PORTFOLIO
           </router-link> -->
-          <router-link to="/creat-post" class="links">
+          <!-- <router-link to="/my-portfolio" class="links">
             PORTFOLIO
           </router-link>
-          <router-link to="/creat-post" class="links">
+          <router-link to="/contact-me" class="links">
             CONTACT
           </router-link>
-          <router-link to="/login" class="links">
+          <router-link to="#" class="links">
             SIGN IN
-          </router-link>
+          </router-link> -->
         </v-col>
         <v-btn
           class="menu-icon"
@@ -50,7 +62,11 @@
           @click="toggleMobileNav"
           v-show="mobile"
         >
-          <v-icon class="white--text">mdi-close</v-icon>
+          <v-icon class="white--text"
+            >mdi-{{
+              mobileNav === false ? "format-list-bulleted" : "close"
+            }}</v-icon
+          >
         </v-btn>
       </v-row>
     </v-app-bar>
@@ -63,10 +79,27 @@
     <!-- </div> -->
     <transition name="mobile-nav">
       <ul class="mobile-nav" v-show="mobileNav">
-        <router-link class="links links-mobile" to="#">ABOUT ME</router-link>
-        <router-link class="links links-mobile" to="#">CONTACT</router-link>
-        <router-link class="links links-mobile" to="#">PORTFOLIO</router-link>
-        <router-link class="links links-mobile" to="#">SIGN IN</router-link>
+        <!-- <router-link class="links links-mobile" to="/about-me"> -->
+        <!-- <v-btn @click="toggleMobileNav" target="/contact-me">
+          ABOUT ME
+        </v-btn> -->
+        <a href="/contact-me" class="links links-mobile"> ABOUT ME</a>
+        <!-- </router-link> -->
+        <router-link
+          class="links links-mobile"
+          @click="toggleMobileNav"
+          to="/my-portfolio"
+          >CONTACT</router-link
+        >
+        <router-link
+          class="links links-mobile"
+          @click="toggleMobileNav"
+          to="/contact-me"
+          >PORTFOLIO</router-link
+        >
+        <router-link class="links links-mobile" @click="toggleMobileNav" to="#"
+          >SIGN IN</router-link
+        >
       </ul>
     </transition>
   </v-container>
@@ -97,6 +130,7 @@ export default {
     },
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav;
+      console.log("Clicked Link");
     },
     // darkMode() {
     //   this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
@@ -109,7 +143,7 @@ export default {
 <style lang="scss" scoped>
 .mobile-nav-enter-active,
 .mobile-nav-leave-active {
-  transition: all 1s ease;
+  transition: all 0.7s ease;
 }
 
 .mobile-nav-enter {
@@ -142,7 +176,7 @@ export default {
   align-items: center;
   justify-content: center;
   position: fixed;
-  height: 80%;
+  height: 90%;
   background-color: black;
   top: 12%;
   left: 0;

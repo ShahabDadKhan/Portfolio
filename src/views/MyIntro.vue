@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container id="my-intro">
     <v-row align="center" justify="center">
       <v-col
         order-sm="1"
@@ -56,11 +56,12 @@ export default {};
 
 <style lang="scss" scoped>
 .container {
-  height: 80vh;
+  height: 85vh;
 }
 
 .row {
   height: 100%;
+  padding-bottom: 10%;
 }
 
 .home-text-1 {
