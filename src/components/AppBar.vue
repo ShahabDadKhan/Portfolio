@@ -4,7 +4,7 @@
       height="100px"
       style="box-shadow:0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);"
       app
-      hide-on-scroll
+      :hide-on-scroll="!mobileNav"
       color="black"
     >
       <v-row>
@@ -79,13 +79,45 @@
     <!-- </div> -->
     <transition name="mobile-nav">
       <ul class="mobile-nav" v-show="mobileNav">
+        <a
+          href="#about-me"
+          v-smooth-scroll
+          @click="toggleMobileNav"
+          class="links links-mobile"
+        >
+          ABOUT ME</a
+        >
+        <a
+          href="#my-portfolio"
+          v-smooth-scroll
+          @click="toggleMobileNav"
+          class="links links-mobile"
+        >
+          PORTFOLIO</a
+        >
+        <a
+          href="#contect-me"
+          v-smooth-scroll
+          @click="toggleMobileNav"
+          class="links links-mobile"
+        >
+          CONTACT</a
+        >
+        <a
+          href="#"
+          v-smooth-scroll
+          @click="toggleMobileNav"
+          class="links links-mobile"
+        >
+          SIGN IN</a
+        >
         <!-- <router-link class="links links-mobile" to="/about-me"> -->
         <!-- <v-btn @click="toggleMobileNav" target="/contact-me">
           ABOUT ME
         </v-btn> -->
-        <a href="/contact-me" class="links links-mobile"> ABOUT ME</a>
+        <!-- <a href="/contact-me" class="links links-mobile"> ABOUT ME</a> -->
         <!-- </router-link> -->
-        <router-link
+        <!-- <router-link
           class="links links-mobile"
           @click="toggleMobileNav"
           to="/my-portfolio"
@@ -99,7 +131,7 @@
         >
         <router-link class="links links-mobile" @click="toggleMobileNav" to="#"
           >SIGN IN</router-link
-        >
+        > -->
       </ul>
     </transition>
   </v-container>
@@ -160,8 +192,8 @@ export default {
 .menu-icon {
   cursor: pointer;
   position: absolute;
-  top: 32px;
-  right: 25px;
+  top: 20px;
+  right: 55px;
   height: 25px;
   width: auto;
 }

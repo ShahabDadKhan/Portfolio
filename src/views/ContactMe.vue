@@ -72,6 +72,9 @@ export default {};
   border-radius: 15px;
   padding: 3px;
   margin: 25px 0px;
+  @media (max-width: 600px) {
+    width: 30%;
+  }
 }
 
 .btnResume {
