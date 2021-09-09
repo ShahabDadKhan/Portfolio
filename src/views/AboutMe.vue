@@ -94,7 +94,7 @@
 
         <h3 class="my-10">
           My current <span class="span-1"> stack </span> of
-          <span class="span-1">technologies</span> is: <br />
+          <span class="span-1">technologies</span> are: <br />
         </h3>
         <span class="span-3"
           >HTML5 - CSS3 - JAVASCRIPT - SASS - VUEJS - VUEX - VUE ROUTER -

@@ -148,7 +148,7 @@ export default {
   },
   beforeMount() {
     window.addEventListener("resize", this.checkScreen);
-    this.checkScreen;
+    this.checkScreen();
   },
   methods: {
     checkScreen() {

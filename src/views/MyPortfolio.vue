@@ -65,7 +65,7 @@
                   class="d-flex flex-column transition-fast-in-fast-out yellow text-center v-card--reveal"
                   style="height: 100%;"
                 >
-                  <p>{{ post.details }}</p>
+                  <p class="pa-3">{{ post.details }}</p>
                 </div>
               </v-expand-transition>
             </v-img>
@@ -181,6 +181,9 @@ p {
   @media (max-width: 600px) {
     // text-align: center;
     width: 100% !important;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1;
   }
 }
 .content {
