@@ -49,7 +49,7 @@
         /> -->
         <v-hover v-slot="{ hover }">
           <v-card
-            class="d-flex align-center"
+            class="ma-5 d-flex align-center"
             style="cursor:pointer"
             width="100%"
             height="auto"

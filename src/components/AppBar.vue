@@ -193,7 +193,7 @@ export default {
   cursor: pointer;
   position: absolute;
   top: 20px;
-  right: 55px;
+  right: 30px;
   height: 25px;
   width: auto;
 }
