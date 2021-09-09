@@ -118,8 +118,8 @@ export default {
           name: "Blog App",
           number: "4",
           photo: "blogApp",
-          linkToApp: "#",
-          linkToCode: "#",
+          linkToApp: "https://blog-web-c957f.web.app/",
+          linkToCode: "https://github.com/ShahabDadKhan/blog-website",
           info:
             "A Blog App made with VueJs. It use Vuex & Firebase to take information, and displays blogs.",
           details:
