@@ -24,11 +24,11 @@
           <h2>{{ post.name }}</h2>
           <p>{{ post.info }}</p>
           <div>
-            <v-btn class="yellow  mr-3" :to="post.linkToApp" rounded>
+            <v-btn class="yellow  mr-3" :href="post.linkToApp" rounded>
               <v-icon class="mr-2">mdi-xml</v-icon>
               Visit
             </v-btn>
-            <v-btn :to="post.linkToCode" rounded>
+            <v-btn :href="post.linkToCode" rounded>
               <v-icon class="mr-2">mdi-github</v-icon>
               Source
             </v-btn>
@@ -50,7 +50,7 @@
         <v-hover v-slot="{ hover }">
           <v-card
             class="d-flex align-center"
-            color=""
+            style="cursor:pointer"
             width="100%"
             height="auto"
           >
@@ -85,8 +85,8 @@ export default {
           name: "Portfolio",
           number: "1",
           photo: "portfolioApp",
-          linkToApp: "#",
-          linkToCode: "#",
+          linkToApp: "https://portfolio-7956c.web.app/#/",
+          linkToCode: "https://github.com/ShahabDadKhan/Portfolio",
           info:
             "This very website you're now watching. I wanted something fast and good for my portfolio.",
           details:
@@ -176,6 +176,7 @@ p {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.7;
+  text-align: center;
   width: 70%;
   @media (max-width: 600px) {
     // text-align: center;
@@ -200,12 +201,12 @@ p {
 }
 .blog-content {
   @media (max-width: 1400px) {
-    order: 2;
+    order: 1;
   }
 }
 .blog-image {
   @media (max-width: 1400px) {
-    order: 1;
+    order: 2;
   }
 }
 

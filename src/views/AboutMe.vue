@@ -97,7 +97,8 @@
           <span class="span-1">technologies</span> is: <br />
         </h3>
         <span class="span-3"
-          >HTML5 - CSS3 - JAVASCRIPT - SASS - VUEJS - VUETIFY - STYLED<br />
+          >HTML5 - CSS3 - JAVASCRIPT - SASS - VUEJS - VUEX - VUE ROUTER -
+          VUETIFY - STYLED<br />
           COMPONENTS - FIREBASE - BABEL - GITHUB</span
         >
       </v-col>

@@ -114,7 +114,7 @@ export default {
       windowWidth: null,
     };
   },
-  created() {
+  beforeMount() {
     window.addEventListener("resize", this.checkScreen);
     this.checkScreen;
   },
@@ -122,8 +122,7 @@ export default {
     checkScreen() {
       this.windowWidth = window.innerWidth;
       if (this.windowWidth <= 778) {
-        this.mobile = true;
-        return;
+        return (this.mobile = true);
       }
       this.mobile = false;
       this.mobileNav = false;

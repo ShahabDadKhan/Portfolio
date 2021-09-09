@@ -1,7 +1,12 @@
 <template>
   <v-container id="contect-me" class="mt-16">
     <v-row>
-      <v-col class="text-center">
+      <v-col
+        class="text-center"
+        style="display: flex;
+              flex-direction: column;
+              align-items: center;"
+      >
         <h1>CONTACT ME</h1>
         <h3 class="my-10">
           If you want to <span class="span-2">talk</span>, you can
@@ -9,6 +14,19 @@
           shahabkhan681@gmail.com
         </h3>
         <!-- <p>shahabkhan681@gmail.com</p> -->
+        <div class="divResume">
+          <!-- <v-btn> -->
+          <a
+            href="../assets/ShahabResume.pdf"
+            class="btnResume"
+            download="Resume"
+          >
+            <!-- <v-icon class="mr-2 white--text">mdi-download</v-icon> -->
+            Resume
+          </a>
+          <!-- <v-img src="../assets/ShahabResume.pdf"></v-img> -->
+          <!-- </v-btn> -->
+        </div>
         <div>
           <v-btn
             small
@@ -44,6 +62,27 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.divResume {
+  width: 12%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $yellow;
+  border-radius: 15px;
+  padding: 3px;
+  margin: 25px 0px;
+}
+
+.btnResume {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    color: $yellow;
+  }
+}
 .v-btn {
   background-color: black !important;
   color: white;
