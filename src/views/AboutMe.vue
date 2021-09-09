@@ -117,10 +117,16 @@ export default {};
   display: inline-block;
   transform: rotate(-2deg);
   font-weight: 500;
+  @media (max-width: 400px) {
+    font-weight: 400;
+  }
 }
 
 .span-2 {
   font-weight: 600;
+  @media (max-width: 400px) {
+    font-weight: 500;
+  }
 }
 
 .span-3 {
@@ -129,6 +135,10 @@ export default {};
   font-size: 30;
   font-weight: 600;
   color: $yellow;
+  @media (max-width: 400px) {
+    font-size: 22px;
+    font-weight: 500;
+  }
 }
 
 .links {
@@ -139,17 +149,33 @@ p {
   font-size: 22px;
   font-weight: 300;
   line-height: 1.8;
+
+  @media (max-with: 400px) {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1;
+  }
 }
 h1 {
   font-family: Quicksand;
   font-size: 42px;
   font-weight: 600;
   color: $yellow;
+
+  @media (max-with: 400px) {
+    font-size: 12px !important;
+    // font-weight: 00;
+  }
 }
 
 h3 {
   font-family: Poppins;
   font-size: 20px;
   font-weight: 400;
+
+  @media (max-with: 400px) {
+    font-size: 16px;
+    font-weight: 300;
+  }
 }
 </style>

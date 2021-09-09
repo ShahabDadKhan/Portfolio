@@ -16,11 +16,7 @@
         <!-- <p>shahabkhan681@gmail.com</p> -->
         <div class="divResume">
           <!-- <v-btn> -->
-          <a
-            href="../assets/ShahabResume.pdf"
-            class="btnResume"
-            download="Resume"
-          >
+          <a href="../assets/Resume.pdf" class="btnResume" download>
             <!-- <v-icon class="mr-2 white--text">mdi-download</v-icon> -->
             Resume
           </a>

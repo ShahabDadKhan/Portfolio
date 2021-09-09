@@ -41,11 +41,24 @@
         md="4"
       >
         <!-- <div style=""> -->
-        <v-avatar size="160">
+        <v-avatar>
           <v-img src="../assets/Img/avatar.png"></v-img>
         </v-avatar>
         <!-- </div> -->
       </v-col>
+    </v-row>
+    <v-row justify="center">
+      <a
+        href="#about-me"
+        v-smooth-scroll
+        class="links"
+        style="text-decoration: none;"
+      >
+        <v-icon class="white--text">mdi-transfer-down</v-icon></a
+      >
+      <a href="#app-bar" v-smooth-scroll class="scrollToTop">
+        <v-icon x-large class="white--text">mdi-transfer-up</v-icon></a
+      >
     </v-row>
   </v-container>
 </template>
@@ -55,12 +68,29 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.scrollToTop {
+  text-decoration: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.v-avatar {
+  width: 160px !important;
+  height: 160px !important;
+
+  @media (max-width: 600px) {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
 .container {
   height: 85vh;
 }
 
 .row {
-  height: 100%;
+  height: 95%;
   padding-bottom: 10%;
 }
 
@@ -70,17 +100,13 @@ export default {};
   font-weight: 200;
 
   @media (max-width: 600px) {
-    // justify-content: center;
-    // align-items: center;
-    // display: flex;
-    // flex-direction: column;
     text-align: center;
     font-size: 42px;
   }
 
-  @media (max-width: 330px) {
-    // font-size: 42px;
-    text-align: center;
+  @media (max-width: 400px) {
+    font-size: 32px;
+    // text-align: center;
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid id="app-bar">
     <v-app-bar
       height="100px"
       style="box-shadow:0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);"
