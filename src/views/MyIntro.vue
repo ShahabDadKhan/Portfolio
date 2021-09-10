@@ -71,7 +71,7 @@ export default {};
 .scrollToTop {
   text-decoration: none;
   position: fixed;
-  bottom: 30px;
+  bottom: 50px;
   right: 30px;
 }
 
@@ -86,7 +86,7 @@ export default {};
 }
 
 .container {
-  height: 85vh;
+  height: 84vh;
 }
 
 .row {
