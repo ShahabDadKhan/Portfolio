@@ -15,14 +15,14 @@
             In college I came across programming world
           </span>
           & decided to start my journey into it so I looked for tutorials on
-          youtube but I only learned a little which made me developed some small
-          projects with HTML & CSS which I myself never looked back to… So I
-          wasn’t learning much and improving so, I felt stuck. <br />
+          youtube from which I only learned a little which made me developed
+          some small projects with HTML & CSS which I myself never looked back
+          to… So I wasn’t learning much and improving so I felt stuck. <br />
         </p>
         <p class="my-5">
-          After my college degree in <span class="span-2">"Maths"</span>, I gave
-          my full preference to coding & learning about it. I started my journey
-          as a programmer 1 year ago when I enrolled in a
+          After my college degree in <span class="span-2">"Mathematics"</span>,
+          I gave my full preference to coding & learning about it. I started my
+          journey as a programmer 1 year ago when I enrolled in a
           <span class="span-2">
             <a
               class="links"
