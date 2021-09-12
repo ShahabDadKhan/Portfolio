@@ -19,6 +19,7 @@
           some small projects with HTML & CSS which I myself never looked back
           to… So I wasn’t learning much and improving so I felt stuck. <br />
         </p>
+
         <p class="my-5">
           After my college degree in <span class="span-2">"Mathematics"</span>,
           I gave my full preference to coding & learning about it. I started my
@@ -79,7 +80,7 @@
           knowledge I gathered from the courses, you can check them on my
           <span class="span-2"> portfolio.</span>
           <br />
-          In my free time, I likes to play <span class="span-2">Fifa</span>,
+          In my spare time, I like to play <span class="span-2">Fifa</span>,
           <span class="span-2">Read Books</span>, and play
           <span class="span-2">Football</span>,
           <span class="span-2">Cricket</span> &
