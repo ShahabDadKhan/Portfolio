@@ -5,6 +5,7 @@ import ContactMe from "../views/ContactMe.vue";
 import AboutMe from "../views/AboutMe.vue";
 import MyIntro from "../views/MyIntro.vue";
 import MyPortfolio from "../views/MyPortfolio.vue";
+import SignIn from "../views/SignIn.vue";
 
 Vue.use(VueRouter);
 
@@ -47,6 +48,14 @@ const routes = [
     component: MyPortfolio,
     meta: {
       title: "",
+    },
+  },
+  {
+    path: "/signin",
+    name: "SignIn",
+    component: SignIn,
+    meta: {
+      title: "Sign In",
     },
   },
 ];

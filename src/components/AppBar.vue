@@ -161,7 +161,7 @@ export default {
     },
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav;
-      console.log("Clicked Link");
+      // console.log("Clicked Link");
     },
     // darkMode() {
     //   this.$vuetify.theme.dark = !this.$vuetify.theme.dark;

@@ -54,7 +54,24 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      a: 0,
+      b: 1,
+    };
+  },
+  created: {
+    // const fib = (n)=>{
+    //   const fibarray=[0.1];
+    //   for (var i=2; i<n; i++){
+    //     fibarray.push(fibarray[i-2]+fibarray[i-1])
+    //   }
+    //   return fibarray
+    // }
+    // console.log(fib(10));
+  },
+};
 </script>
 
 <style lang="scss" scoped>

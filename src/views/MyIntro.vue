@@ -42,7 +42,7 @@
       >
         <!-- <div style=""> -->
         <v-avatar>
-          <v-img src="../assets/Img/avatar.png"></v-img>
+          <v-img src="../assets/Img/myAvatar.png"></v-img>
         </v-avatar>
         <!-- </div> -->
       </v-col>

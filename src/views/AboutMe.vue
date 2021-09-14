@@ -80,11 +80,10 @@
           knowledge I gathered from the courses, you can check them on my
           <span class="span-2"> portfolio.</span>
           <br />
-          In my spare time, I like to play <span class="span-2">Fifa</span>,
-          <span class="span-2">Read Books</span>, and play
-          <span class="span-2">Football</span>,
-          <span class="span-2">Cricket</span> &
-          <span class="span-2">Carrom.</span>
+          In my spare time, I like to play
+          <span class="span-2"> Football</span>,
+          <span class="span-2"> Cricket</span> and
+          <span class="span-2">Read Books</span>
         </p>
         <p>
           I always want to <span class="span-2"> learn more </span>, do more,
@@ -99,8 +98,7 @@
         </h3>
         <span class="span-3"
           >HTML5 - CSS3 - JAVASCRIPT - SASS - VUEJS - VUEX - VUE ROUTER -
-          VUETIFY - STYLED<br />
-          COMPONENTS - FIREBASE - BABEL - GITHUB</span
+          <br />VUETIFY - FIREBASE - BABEL - GITHUB</span
         >
       </v-col>
     </v-row>
