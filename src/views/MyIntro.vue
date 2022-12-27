@@ -64,7 +64,34 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed:{
+    scrollListener() {
+      // let el = this.$el;
+      // if (!el) {
+      //   this.detachScrollListener();
+      // }
+
+      let scrollTop =
+        window.pageYOffset !== undefined
+          ? window.pageYOffset
+          : (
+              document.documentElement ||
+              document.body.parentNode ||
+              document.body
+            ).scrollTop;
+      if (scrollTop > 10) {
+        // this.showGoToTop = true;
+        console.log("true");
+        return true
+      } else {
+        // this.showGoToTop = false;
+        console.log("false");
+        return false
+      }
+    },
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -73,6 +100,13 @@ export default {};
   position: fixed;
   bottom: 50px;
   right: 30px;
+
+  
+  .v-icon {    
+    &:hover {
+      color: $yellow !important;
+    }
+  }
 }
 
 .v-avatar {

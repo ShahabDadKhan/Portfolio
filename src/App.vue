@@ -5,7 +5,7 @@
       <my-intro />
       <about-me />
       <my-portfolio />
-      <contact-me />
+      <!-- <contact-me /> -->
       <!-- <router-view /> -->
       <the-footer />
     </v-main>
@@ -16,7 +16,7 @@
 import AppBar from "./components/AppBar.vue";
 import TheFooter from "./components/TheFooter.vue";
 import AboutMe from "./views/AboutMe.vue";
-import ContactMe from "./views/ContactMe.vue";
+// import ContactMe from "./views/ContactMe.vue";
 import MyIntro from "./views/MyIntro.vue";
 import MyPortfolio from "./views/MyPortfolio.vue";
 export default {
@@ -26,7 +26,7 @@ export default {
     MyIntro,
     AboutMe,
     MyPortfolio,
-    ContactMe,
+    // ContactMe,
   },
   name: "App",
 

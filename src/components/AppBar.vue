@@ -38,7 +38,7 @@
           </router-link> -->
           <a href="#about-me" v-smooth-scroll class="links"> ABOUT ME</a>
           <a href="#my-portfolio" v-smooth-scroll class="links"> PORTFOLIO</a>
-          <a href="#contect-me" v-smooth-scroll class="links"> CONTACT</a>
+          <a href="#the-footer" v-smooth-scroll class="links"> CONTACT</a>
           <a href="#" v-smooth-scroll class="links"> SIGN IN</a>
 
           <!-- <router-link to="/blogs" class="links">

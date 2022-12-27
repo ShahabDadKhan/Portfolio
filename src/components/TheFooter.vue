@@ -1,22 +1,36 @@
 <template>
-  <v-container class="my-16">
+  <v-container id="the-footer" class="my-16">
+    <contact-me></contact-me>
     <v-row>
       <v-col class="d-flex flex-column justify-center align-center text-center">
-        <v-img max-width="150px" src="../assets/Img/SDK-blackSmall.jpg"></v-img>
+        <img src="../assets/Img/SDK-blackSmall.jpg">
         <h1>SHAHAB DAD KHAN</h1>
         <h4>WEB DEVELOPER</h4>
-        <p class="mt-8">COPYRIGHT&copy;2021,SHAHAB</p>
+        <p class="mt-8">COPYRIGHT&copy;2023,SHAHAB</p>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-export default {};
+import ContactMe from '../views/ContactMe.vue';
+export default {
+  components: { ContactMe },
+  };
 </script>
 <style lang="scss" scoped>
-.v-image {
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.img {
   cursor: pointer !important;
+  width: 100%;
+}
+
+.row:first-child {
+  order: 1;
 }
 
 h1 {

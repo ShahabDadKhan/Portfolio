@@ -1,5 +1,5 @@
 <template>
-  <v-container id="contect-me" class="mt-16">
+  <!-- <v-container id="contect-me" class="mt-16"> -->
     <v-row>
       <v-col
         class="text-center"
@@ -11,18 +11,14 @@
         <h3 class="my-10">
           If you want to <span class="span-2">talk</span>, you can
           <span class="span-2">find me</span> at: <br />
-          shahabkhan681@gmail.com
+          shahabkhandev@gmail.com
         </h3>
         <!-- <p>shahabkhan681@gmail.com</p> -->
-        <div class="divResume">
-          <!-- <v-btn> -->
+        <!-- <div class="divResume">
           <a href="../assets/Shahab_Resume.pdf" class="btnResume" download>
-            <!-- <v-icon class="mr-2 white--text">mdi-download</v-icon> -->
             Resume
           </a>
-          <!-- <v-img src="../assets/ShahabResume.pdf"></v-img> -->
-          <!-- </v-btn> -->
-        </div>
+        </div> -->
         <div>
           <v-btn
             small
@@ -41,16 +37,16 @@
           <v-btn small fab href="https://twitter.com/ShahabDadKhan">
             <v-icon large>mdi-twitter</v-icon>
           </v-btn>
-          <v-btn small fab href="https://www.instagram.com/shahabdadkhan/">
+          <!-- <v-btn small fab href="https://www.instagram.com/shahabdadkhan/">
             <v-icon large>mdi-instagram</v-icon>
-          </v-btn>
-          <v-btn fab href="https://touch.facebook.com/shahab.khan.1800">
+          </v-btn> -->
+          <!-- <v-btn fab href="https://touch.facebook.com/shahab.khan.1800">
             <v-icon large>mdi-facebook</v-icon>
-          </v-btn>
+          </v-btn> -->
         </div>
       </v-col>
     </v-row>
-  </v-container>
+  <!-- </v-container> -->
 </template>
 
 <script>
@@ -61,16 +57,16 @@ export default {
       b: 1,
     };
   },
-  created: {
-    // const fib = (n)=>{
-    //   const fibarray=[0.1];
-    //   for (var i=2; i<n; i++){
-    //     fibarray.push(fibarray[i-2]+fibarray[i-1])
-    //   }
-    //   return fibarray
-    // }
-    // console.log(fib(10));
-  },
+  // created: {
+  //   // const fib = (n)=>{
+  //   //   const fibarray=[0.1];
+  //   //   for (var i=2; i<n; i++){
+  //   //     fibarray.push(fibarray[i-2]+fibarray[i-1])
+  //   //   }
+  //   //   return fibarray
+  //   // }
+  //   // console.log(fib(10));
+  // },
 };
 </script>
 

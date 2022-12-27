@@ -6,21 +6,28 @@
         <h3 class="mb-10">
           If you’re <span class="span-2">wondering</span> who I am…
         </h3>
+        <!-- <p> -->
+        <!-- </p> -->
         <p class="my-5">
-          I’m <span class="span-1"> Shahab </span> , a 23 years old self-taught
-          <span class="span-1"> Front-end </span> developer <br />
-        </p>
-        <p>
-          <span class="span-2">
+          I’m <span class="span-1"> Shahab </span> , a {{ ageCalculator }} years old <span class="span-2">self-taught </span>
+          <!-- <span class="span-1"> Front-end </span> developer <br /> -->
+        <!-- </p>
+        <p> -->
+          professional <span class="span-1"> Software developer </span> with <span class="span-2">{{experienceCalculator}}+</span> year 
+          experience in developing <span class="span-2">responsive web apps and websites</span>.
+
+          Curious and committed, completing the tasks at hand <span class="span-2">honestly</span>
+          and <span class="span-2">passionately</span>.
+          <!-- <span class="span-2">
             In college I came across programming world
           </span>
           & decided to start my journey into it so I looked for tutorials on
           youtube from which I only learned a little which made me developed
           some small projects with HTML & CSS which I myself never looked back
-          to… So I wasn’t learning much and improving so I felt stuck. <br />
+          to… So I wasn’t learning much and improving so I felt stuck. <br /> -->
         </p>
 
-        <p class="my-5">
+        <!-- <p class="my-5">
           After my college degree in <span class="span-2">"Mathematics"</span>,
           I gave my full preference to coding & learning about it. I started my
           journey as a programmer 1 year ago when I enrolled in a
@@ -73,8 +80,8 @@
             >
           </span>
           <br />
-        </p>
-        <p class="my-5">
+        </p> -->
+        <!-- <p class="my-5">
           Because we know the best way to learn is to practice, I also did a
           bunch of <span class="span-2"> personal projects </span> with the
           knowledge I gathered from the courses, you can check them on my
@@ -84,7 +91,7 @@
           <span class="span-2"> Football</span>,
           <span class="span-2"> Cricket</span> and
           <span class="span-2">Read Books</span>
-        </p>
+        </p> -->
         <p>
           I always want to <span class="span-2"> learn more </span>, do more,
           and <span class="span-2"> be more.</span> I’m also a firm
@@ -93,20 +100,35 @@
         </p>
 
         <h3 class="my-10">
-          My current <span class="span-1"> stack </span> of
-          <span class="span-1">technologies</span> are: <br />
+          My current <span class="span-1"> TOOLS </span> are: <br />
         </h3>
         <span class="span-3"
-          >HTML5 - CSS3 - JAVASCRIPT - SASS - VUEJS - VUEX - VUE ROUTER -
-          <br />VUETIFY - FIREBASE - BABEL - GITHUB</span
-        >
+          >HTML - CSS/SASS/LESS - JAVASCRIPT - VUEJS - VUETIFY/BOOTSTRAP - GITHUB.
+          <br> Basic knowledge of REACT - NODEJS - TYPESCRIPT - TAILWIND - NUXT - FIREBASE.
+          </span>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-export default {};
+export default {
+  computed:{
+    // Instead of updating age and experience again and again each year, created a function for that which will update it automatically.
+    ageCalculator(){
+      let today = new Date();
+      let currentYear = today.getFullYear();
+      let currentAge = currentYear - 1998
+      return currentAge; 
+    },
+    experienceCalculator(){
+      let today = new Date();
+      let currentYear = today.getFullYear();
+      let currentExperience = currentYear - 2021
+      return currentExperience;
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
