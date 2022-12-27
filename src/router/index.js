@@ -6,6 +6,8 @@ import AboutMe from "../views/AboutMe.vue";
 import MyIntro from "../views/MyIntro.vue";
 import MyPortfolio from "../views/MyPortfolio.vue";
 import SignIn from "../views/SignIn.vue";
+import BriefAboutMyself from "../pages/BriefAboutMyself.vue"
+
 
 Vue.use(VueRouter);
 
@@ -58,6 +60,14 @@ const routes = [
       title: "Sign In",
     },
   },
+  {
+    path:'/about-shahab',
+    name: 'AboutShahab',
+    component: BriefAboutMyself,
+    meta: {
+      title: 'About Shahab'
+    }
+  }
 ];
 
 const router = new VueRouter({

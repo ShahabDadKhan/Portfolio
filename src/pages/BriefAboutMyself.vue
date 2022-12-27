@@ -1,36 +1,27 @@
 <template>
-  <v-container id="about-me">
+  <v-container id="my-self">
     <v-row class="mb-16" align="center" justify="center">
       <v-col cols="12" class="text-center">
-        <h1 class="my-2">ABOUT ME</h1>
+        <!-- <h1 class="my-2">ABOUT ME</h1>
         <h3 class="mb-10">
           If you’re <span class="span-2">wondering</span> who I am…
-        </h3>
+        </h3> -->
         <!-- <p> -->
         <!-- </p> -->
         <p class="my-5">
-          I’m <span class="span-1"> Shahab </span> , a {{ ageCalculator }} years old <span class="span-2">self-taught </span>
-          <!-- <span class="span-1"> Front-end </span> developer <br /> -->
-        <!-- </p>
-        <p> -->
-          professional <span class="span-1"> Software developer </span> with <span class="span-2">{{experienceCalculator}}+</span> year 
-          experience in developing <span class="span-2">responsive web apps and websites</span>.
-
-          Curious and committed, completing the tasks at hand <span class="span-2">honestly</span>
-          and <span class="span-2">passionately</span>.
-          <!-- <span class="span-2">
-            In college I came across programming world
+          <span class="span-2">
+          In my college I came across programming world
           </span>
           & decided to start my journey into it so I looked for tutorials on
           youtube from which I only learned a little which made me developed
           some small projects with HTML & CSS which I myself never looked back
-          to… So I wasn’t learning much and improving so I felt stuck. <br /> -->
+          to. I wasn’t learning much and improving, I felt stuck. <br />
         </p>
 
-        <!-- <p class="my-5">
+        <p class="my-5">
           After my college degree in <span class="span-2">"Mathematics"</span>,
           I gave my full preference to coding & learning about it. I started my
-          journey as a programmer 1 year ago when I enrolled in a
+          journey as a programmer in 2020 when I enrolled in a
           <span class="span-2">
             <a
               class="links"
@@ -64,7 +55,7 @@
           </span>
 
           there I quickly started to
-          <span class="span-1">love Javascript</span> , Which then i finally
+          <span class="span-1">love Javascript</span> , Which then I finally
           landing on
           <span class="span-2">
             <a
@@ -80,29 +71,36 @@
             >
           </span>
           <br />
-        </p> -->
-        <!-- <p class="my-5">
+        </p>
+        <p class="my-5">
           Because we know the best way to learn is to practice, I also did a
           bunch of <span class="span-2"> personal projects </span> with the
-          knowledge I gathered from the courses, you can check them on my
+          knowledge I gathered from the courses, google, youtube and people around me, you can check them on my
           <span class="span-2"> portfolio.</span>
-          <br />
+          <!-- <br />
+         
+
           In my spare time, I like to play
           <span class="span-2"> Football</span>,
           <span class="span-2"> Cricket</span> and
-          <span class="span-2">Read Books</span>
-        </p> -->
-        <p>
+          <span class="span-2">Read Books</span> -->
+        </p>
+
+        <p class="my-5">
+          Apart from my work, I spend time playing <span class="span-2"> Football</span>, <span class="span-2">Adventure traveling</span>, 
+          <span class="span-2">Watching podcasts</span>, and doing day-to-day life activities.
+        </p>
+        <!-- <p>
           I always want to <span class="span-2"> learn more </span>, do more,
           and <span class="span-2"> be more.</span> I’m also a firm
           <span class="span-2"> believer </span>that we should
           <span class="span-1"> never settle.</span>
-        </p>
+        </p> -->
 
-        <h3 class="my-10">
+        <!-- <h3 class="my-10">
           My current <span class="span-1"> TOOLS </span> are: <br />
-        </h3>
-        <span class="span-3"
+        </h3> -->
+        <!-- <span class="span-3"
           >HTML - CSS/SASS/LESS - JAVASCRIPT - VUEJS - VUETIFY/BOOTSTRAP - GITHUB.
           <br> Basic knowledge of REACT - NODEJS - TYPESCRIPT - TAILWIND - NUXT - FIREBASE.
           </span>
@@ -113,7 +111,7 @@
               <v-icon>mdi-arrow-top-right-thin</v-icon>
               </router-link>
             </span>
-          </div>
+          </div> -->
       </v-col>
     </v-row>
   </v-container>
@@ -142,25 +140,27 @@ export default {
 <style lang="scss" scoped>
 
 // .container {
-
-//   &:before {
-//     content: ' ';
-//     // display: block;
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: 100%;
-//     opacity: 0.2;
-//     background-image: url('../assets/Img/Background/desktop.jpg');
-    
-//     // background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
-//     // background-repeat: no-repeat;
-//     // background-position: 50% 0;
-//     // background-size: cover;
-//     // background-attachment: fixed;
-//   }
+//   background-image: url('../assets/Img/Background/Batman\ HD\ Wallpaper\ Background\ Image\ 1920x1080\ ID72397.jpg');
 // }
+.container:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url('../assets/Img/Background/desktop.jpg');
+
+  // background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
 .span-1 {
   background-color: $yellow;
   color: black;
@@ -238,19 +238,7 @@ h3 {
     transform: rotate(45deg);
   }
 
-  span {
-    // text-decoration: none;
-    // color: $white;
-    a {
-      text-decoration: none;
-      color: $white;
-      
-      &:hover {
-        color: $yellow;
-      }
-    }
-    
-    &:hover {
+  span:hover {
     cursor: pointer;
     color: $yellow;
 
@@ -259,6 +247,5 @@ h3 {
       transform: rotate(0deg);
     }
   }
- }
 }
 </style>
