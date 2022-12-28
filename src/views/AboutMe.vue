@@ -6,92 +6,14 @@
         <h3 class="mb-10">
           If you’re <span class="span-2">wondering</span> who I am…
         </h3>
-        <!-- <p> -->
-        <!-- </p> -->
         <p class="my-5">
           I’m <span class="span-1"> Shahab </span> , a {{ ageCalculator }} years old <span class="span-2">self-taught </span>
-          <!-- <span class="span-1"> Front-end </span> developer <br /> -->
-        <!-- </p>
-        <p> -->
           professional <span class="span-1"> Software developer </span> with <span class="span-2">{{experienceCalculator}}+</span> year 
           experience in developing <span class="span-2">responsive web apps and websites</span>.
 
           Curious and committed, completing the tasks at hand <span class="span-2">honestly</span>
           and <span class="span-2">passionately</span>.
-          <!-- <span class="span-2">
-            In college I came across programming world
-          </span>
-          & decided to start my journey into it so I looked for tutorials on
-          youtube from which I only learned a little which made me developed
-          some small projects with HTML & CSS which I myself never looked back
-          to… So I wasn’t learning much and improving so I felt stuck. <br /> -->
         </p>
-
-        <!-- <p class="my-5">
-          After my college degree in <span class="span-2">"Mathematics"</span>,
-          I gave my full preference to coding & learning about it. I started my
-          journey as a programmer 1 year ago when I enrolled in a
-          <span class="span-2">
-            <a
-              class="links"
-              href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/"
-            >
-              Build Responsive Real-World Websites with HTML and CSS</a
-            >
-          </span>
-          course by a phenomenal teacher
-          <span class="span-2">
-            <a class="links" href="https://twitter.com/jonasschmedtman"
-              >Jonas Schmedtmann</a
-            >
-          </span>
-          & went on enrolling for two more courses
-          <span class="span-2">
-            <a
-              class="links"
-              href="https://www.udemy.com/course/advanced-css-and-sass/"
-            >
-              Advanced CSS and Sass: Flexbox, Grid, Animations and More!</a
-            >
-          </span>
-          <span class="span-2">
-            <a
-              class="links"
-              href="https://www.udemy.com/course/the-complete-javascript-course/"
-            >
-              The Complete JavaScript Course 2021: From Zero to Expert!</a
-            >
-          </span>
-
-          there I quickly started to
-          <span class="span-1">love Javascript</span> , Which then i finally
-          landing on
-          <span class="span-2">
-            <a
-              class="links"
-              href="https://www.udemy.com/course/vuejs-2-the-complete-guide/"
-              >Vue - The Complete Guide (w/ Router, Vuex, Composition API)</a
-            >
-          </span>
-          course by another master
-          <span class="span-2">
-            <a class="links" href="https://twitter.com/maxedapps"
-              >Maximilian Schwarzmüller</a
-            >
-          </span>
-          <br />
-        </p> -->
-        <!-- <p class="my-5">
-          Because we know the best way to learn is to practice, I also did a
-          bunch of <span class="span-2"> personal projects </span> with the
-          knowledge I gathered from the courses, you can check them on my
-          <span class="span-2"> portfolio.</span>
-          <br />
-          In my spare time, I like to play
-          <span class="span-2"> Football</span>,
-          <span class="span-2"> Cricket</span> and
-          <span class="span-2">Read Books</span>
-        </p> -->
         <p>
           I always want to <span class="span-2"> learn more </span>, do more,
           and <span class="span-2"> be more.</span> I’m also a firm
@@ -99,12 +21,36 @@
           <span class="span-1"> never settle.</span>
         </p>
 
-        <h3 class="my-10">
+        <h3 class="mt-15 my-10">
           My current <span class="span-1"> TOOLS </span> are: <br />
         </h3>
         <span class="span-3"
-          >HTML - CSS/SASS/LESS - JAVASCRIPT - VUEJS - VUETIFY/BOOTSTRAP - GITHUB.
-          <br> Basic knowledge of REACT - NODEJS - TYPESCRIPT - TAILWIND - NUXT - FIREBASE.
+          >
+          <ul class="icons-list">
+            <li v-for="(icon, index ) in icons1" :key="index">
+              <v-tooltip top>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon v-bind="attrs"
+                    v-on="on" :class="icon.color">mdi-{{ icon.name }}</v-icon>
+                </template>
+                <span>{{ icon.tooltip }}</span>
+               </v-tooltip>
+            </li>
+          </ul>
+          <br> Basic knowledge of <br>
+          <ul class="icons-list">
+            <li v-for="(icon, index ) in icons2" :key="index">
+              <v-tooltip bottom>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon v-bind="attrs"
+                    v-on="on" :class="icon.color">mdi-{{ icon.name }}</v-icon>
+                </template>
+                <span>{{ icon.tooltip }}</span>
+               </v-tooltip>
+            </li>
+          </ul>
+          <!-- HTML - CSS/SASS/LESS - JAVASCRIPT - VUEJS - VUETIFY/BOOTSTRAP - GITHUB. -->
+          <!-- - NODEJS - TYPESCRIPT - TAILWIND - NUXT - FIREBASE. -->
           </span>
           <div class="know-more">
             <span>
@@ -121,6 +67,28 @@
 
 <script>
 export default {
+  data(){
+    return {
+      icons1:[
+        {name:'language-html5',color:'html',tooltip:'HTML'},
+        {name:'language-css3',color:'css',tooltip:'CSS'},
+        {name:'sass',color:'scss',tooltip:'SCSS/SASS/LESS'},
+        {name:'language-javascript',color:'javascript',tooltip:'Javascript'},
+        {name:'vuejs',color:'vuejs',tooltip:'Vue'},
+        {name:'vuetify',color:'vuetify',tooltip:'Vuetify'},
+        {name:'bootstrap',color:'bootstrap',tooltip:'Bootstrap'},
+        {name:'github',color:'github',tooltip:'Github'}
+      ],
+      icons2:[
+        {name:'react',color:'react',tooltip:'React'},
+        {name:'nodejs',color:'nodejs',tooltip:'Node'},
+        {name:'language-typescript',color:'typescript',tooltip:'Typescript'},
+        {name:'tailwind',color:'tailwind',tooltip:'Tailwind'},
+        {name:'nuxt',color:'nuxt',tooltip:'Nuxt'},
+        {name:'firebase',color:'firebase',tooltip:'Firebase'}
+      ]
+    }
+  },
   computed:{
     // Instead of updating age and experience again and again each year, created a function for that which will update it automatically.
     ageCalculator(){
@@ -140,27 +108,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-// .container {
-
-//   &:before {
-//     content: ' ';
-//     // display: block;
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: 100%;
-//     opacity: 0.2;
-//     background-image: url('../assets/Img/Background/desktop.jpg');
-    
-//     // background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
-//     // background-repeat: no-repeat;
-//     // background-position: 50% 0;
-//     // background-size: cover;
-//     // background-attachment: fixed;
-//   }
-// }
 .span-1 {
   background-color: $yellow;
   color: black;
@@ -180,7 +127,6 @@ export default {
 }
 
 .span-3 {
-  //   margin: 50px 0px;
   font-family: Poppins;
   font-size: 30;
   font-weight: 600;
@@ -214,7 +160,6 @@ h1 {
 
   @media (max-with: 400px) {
     font-size: 12px !important;
-    // font-weight: 00;
   }
 }
 
@@ -239,8 +184,6 @@ h3 {
   }
 
   span {
-    // text-decoration: none;
-    // color: $white;
     a {
       text-decoration: none;
       color: $white;
@@ -260,5 +203,102 @@ h3 {
     }
   }
  }
+}
+
+.icons-list {
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+
+  &:last-child {
+    margin-top: 25px;
+  }
+
+  .v-icon.v-icon {
+    margin: 0px 10px;
+    font-size: 40px;
+
+    &:hover{
+      cursor: pointer;
+
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(0, 0, 0);
+      perspective: 1000px;
+    }
+
+    @keyframes shake {
+      10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+      
+      30%, 50%, 70% {
+        transform: translate3d(-2px, 0, 0);
+      }
+      40%, 60% {
+        transform: translate3d(2px, 0, 0);
+      } 
+    }
+  }
+}
+
+
+.html {
+  color: #FF0000;
+}
+
+.css {
+  color: #2965f1;
+}
+
+.scss {
+  color: #cc6699;
+}
+
+.javascript {
+  color: #f0db4f;
+}
+
+.vuejs {
+  color: #42b883;
+}
+
+.vuetify {
+  color: #2196F3;
+}
+
+.bootstrap {
+  color: #563d7c;
+}
+
+.github {
+  color: $white;
+}
+
+.react {
+  color:#61dbfb ;
+}
+
+.nodejs {
+  color: #3C873A;
+}
+
+.typescript {
+  color: #007acc;
+}
+
+.tailwind {
+  color:#3490dc ;
+}
+
+.nuxt {
+  color: #41b883;
+}
+
+.firebase {
+  color: #FFCB2B;
 }
 </style>
