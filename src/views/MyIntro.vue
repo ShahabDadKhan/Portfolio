@@ -28,7 +28,7 @@
               <span>Passionate</span>
             </li>
           </ul>
-          Front-end developer
+          Software developer
         </div>
       </v-col>
       <v-col
@@ -48,15 +48,16 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <a
+      <!-- <a
         href="#about-me"
         v-smooth-scroll
         class="links"
         style="text-decoration: none;"
+        data-cursor-hover
       >
         <v-icon class="white--text">mdi-transfer-down</v-icon></a
-      >
-      <a href="#app-bar" v-smooth-scroll class="scrollToTop">
+      > -->
+      <a id="goToTop" @click="scrollIntoDiv" data-cursor-hover class="scrollToTop">
         <v-icon x-large class="white--text">mdi-transfer-up</v-icon></a
       >
     </v-row>
@@ -65,12 +66,34 @@
 
 <script>
 export default {
-  computed:{
+  data(){
+    return {
+      showGoToTop: false,
+    }
+  },
+  methods:{
+    scrollIntoDiv(){
+      if(this.showGoToTop){
+        let elem = document.getElementById("app-bar");
+        elem.scrollIntoView({behavior: 'smooth'});
+        console.log("scroll into app-bar", this.showGoToTop);
+      } else {
+        let elem = document.getElementById("about-me");
+        elem.scrollIntoView({behavior: 'smooth'});
+        console.log("scroll into about me", this.showGoToTop);
+      }
+    },
+    attachScrollListeners() {
+        window.addEventListener("scroll", this.scrollListener.bind(this));
+    },
+    detachScrollListener() {
+        window.removeEventListener("scroll", this.scrollListener.bind(this));
+    },
     scrollListener() {
-      // let el = this.$el;
-      // if (!el) {
-      //   this.detachScrollListener();
-      // }
+      let el = this.$el;
+      if (!el) {
+        this.detachScrollListener();
+      }
 
       let scrollTop =
         window.pageYOffset !== undefined
@@ -80,21 +103,69 @@ export default {
               document.body.parentNode ||
               document.body
             ).scrollTop;
-      if (scrollTop > 10) {
-        // this.showGoToTop = true;
-        console.log("true");
-        return true
+      if (scrollTop > 500) {
+        // added this to hide go to top on mobile and tablet when keypad comes
+        if (
+          window.innerWidth <= 800 &&
+          window.innerHeight <= 600
+        ) {
+          this.showGoToTop = false;
+        }
+        this.showGoToTop = true;
       } else {
-        // this.showGoToTop = false;
-        console.log("false");
-        return false
+        this.showGoToTop = false;
       }
     },
-  }
+    rotateGoToTop(value){
+      if(value) {
+        document.getElementById("goToTop").style.transitionDuration = "0.3s";
+        document.getElementById('goToTop').style.transform = "rotate(0deg)";
+        console.log("watch from if", value);
+      } else {
+        document.getElementById("goToTop").style.transitionDuration = "0.3s";
+        document.getElementById('goToTop').style.transform = "rotate(-180deg)";
+        console.log("watch from else", value);
+      }
+    }
+  },
+  watch:{
+    showGoToTop: function(value){
+      this.rotateGoToTop(value)
+    }
+  },
+  mounted(){
+    this.rotateGoToTop(this.showGoToTop)
+    this.attachScrollListeners();
+    // this.scrollIntoDiv()
+  },
+  beforeUnmount() {
+      window.removeEventListener("online", this.checkOffline);
+      window.removeEventListener("offline", this.checkOffline);
+  },
+  created() {
+      window.addEventListener("resize", this.myEventHandler);
+    },
+  destroyed() {
+    this.detachScrollListener();
+      window.removeEventListener("resize", this.myEventHandler);
+    }
 };
 </script>
 
 <style lang="scss" scoped>
+a {
+  cursor: none;
+}
+
+.links {
+
+  .v-icon {    
+
+    &:hover {
+      color: $yellow !important;
+    }
+  }
+}
 .scrollToTop {
   text-decoration: none;
   position: fixed;
@@ -113,7 +184,7 @@ export default {
   width: 160px !important;
   height: 160px !important;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     width: 100px !important;
     height: 100px !important;
   }
@@ -133,7 +204,7 @@ export default {
   font-size: 62px;
   font-weight: 200;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     text-align: center;
     font-size: 42px;
   }
@@ -147,7 +218,7 @@ export default {
 .home-text-2 {
   width: 305px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column !important;
     justify-content: center;
@@ -163,7 +234,7 @@ span {
   // font-size: ;
   font-weight: 500;
 
-  // @media (max-width: 600px) {
+  // @media (max-width: 768px) {
   //   font-size: 42px;
   // }
 }

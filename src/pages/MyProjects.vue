@@ -53,7 +53,6 @@
           <v-hover v-slot="{ hover }">
             <v-card
               class="ma-5 d-flex align-center"
-              style="cursor:pointer"
               width="100%"
               height="auto"
             >
@@ -135,6 +134,22 @@
   </script>
   
   <style lang="scss" scoped>
+.container:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url('../assets/Img/Background/2.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
   .v-card {
     border: 1px solid $yellow;
   }
@@ -148,7 +163,7 @@
         transform: rotate(-135deg);
 
         &:hover {
-            cursor: pointer;
+            color: $yellow;
         }
     }
   }
@@ -176,7 +191,7 @@
     line-height: 1.7;
     text-align: center;
     width: 70%;
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       // text-align: center;
       width: 100% !important;
       font-size: 12px;
@@ -191,7 +206,7 @@
     // text-align: left;
     align-items: center;
     justify-content: center;
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       padding: 60px 10px;
       text-align: center;
       width: 100% !important;

@@ -19,23 +19,23 @@
             Resume
           </a>
         </div> -->
-        <div>
+        <div class="social-media">
           <v-btn
             small
             fab
             href="https://github.com/ShahabDadKhan?tab=repositories"
           >
-            <v-icon large>mdi-github</v-icon>
+            <v-icon data-cursor-hover large>mdi-github</v-icon>
           </v-btn>
           <v-btn
             small
             fab
             href="https://www.linkedin.com/in/shahab-dad-khan-10b414208/"
           >
-            <v-icon large>mdi-linkedin</v-icon>
+            <v-icon data-cursor-hover large>mdi-linkedin</v-icon>
           </v-btn>
           <v-btn small fab href="https://twitter.com/ShahabDadKhan">
-            <v-icon large>mdi-twitter</v-icon>
+            <v-icon data-cursor-hover large>mdi-twitter</v-icon>
           </v-btn>
           <!-- <v-btn small fab href="https://www.instagram.com/shahabdadkhan/">
             <v-icon large>mdi-instagram</v-icon>
@@ -71,6 +71,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
 .divResume {
   width: 12%;
   display: flex;
@@ -81,7 +87,7 @@ export default {
   border-radius: 15px;
   padding: 3px;
   margin: 25px 0px;
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     width: 30%;
   }
 }
@@ -98,7 +104,7 @@ export default {
 .v-btn {
   background-color: black !important;
   color: white;
-  margin: 0px 20px 0px 0px;
+  // margin: 0px 20px 0px 0px;
 
   @media (max-width: 400px) {
     margin: 0px 1px 0px 0px;

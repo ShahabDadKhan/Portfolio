@@ -23,14 +23,22 @@ export default {
 .container {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 }
 .img {
-  cursor: pointer !important;
+  // cursor: pointer !important;
   width: 100%;
 }
 
 .row:first-child {
   order: 1;
+
+  @media (max-width: 400px) {
+    order: 0;
+  }
 }
 
 h1 {

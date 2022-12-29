@@ -45,7 +45,7 @@
     <!-- <v-row> -->
       <div class="know-more">
             <span>
-              <router-link to="/my-projects">
+              <router-link data-cursor-hover to="/my-projects">
               Explore Personal Projects
               <v-icon>mdi-arrow-top-right-thin</v-icon>
               </router-link>
@@ -178,6 +178,10 @@ export default {
 img {
   width: 60px;
   margin-right: 15px;
+
+  @media (max-width: 768px) {
+    width: 50px;
+  }
 }
 
 .border {
@@ -197,6 +201,10 @@ gap: 40px;
 
   width: auto;
   padding-right: 60px;
+
+  @media (max-width: 400px) {
+    padding-right: 0px;
+  }
 
   // &:first-child {
   //   border-right: 1px solid white;
@@ -252,7 +260,7 @@ gap: 40px;
     }
     
     &:hover {
-    cursor: pointer;
+    // cursor: pointer;
     color: $yellow;
 
     .v-icon {
@@ -293,10 +301,10 @@ p {
   margin-top: 16px;
 
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     // text-align: center;
-    width: 100% !important;
-    font-size: 12px;
+    width: 100%;
+    font-size: 16px;
     font-weight: 300;
     line-height: 1;
   }
@@ -308,7 +316,7 @@ p {
   // text-align: left;
   align-items: center;
   justify-content: center;
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     padding: 60px 10px;
     text-align: center;
     width: 100% !important;

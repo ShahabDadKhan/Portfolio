@@ -1,10 +1,11 @@
 <template>
   <v-app>
-    <v-main>
-      <app-bar v-if="isShow"/>
-       <router-view />
-      <the-footer v-if="isShow"/>
-    </v-main>
+    <app-bar v-if="isShow"/>
+      <v-main>
+        <router-view />
+      </v-main>
+    <the-footer v-if="isShow"/>
+    <cursor-fx color="white" color-hover="#ffc800" allow-on-mobile/>
   </v-app>
 </template>
 
@@ -20,15 +21,10 @@ export default {
   data: () => ({
     isShow:true
   }),
-  // mounted(){
-  //   if(this.$route.path == '/') {
-  //       this.isShow = true
-  //       console.log("true", this.isShow);
-  //     } else {
-  //       this.isShow = false
-  //       console.log("false", this.isShow);
-  //     }
-  // },
+  mounted() {
+    // start it, on mounted, or wherever you want
+    // this.$refs.cursor.start();
+  },
 
   "$route"() {  
       if (this.$route.path == '/') {
@@ -55,10 +51,14 @@ export default {
 </script>
 
 <style lang="scss">
-main {
+#app {
   font-family: "Montserrat", "Poppins", "Quicksand", sans-serif;
   background-color: black;
   color: #fff;
   width: 100%;
+}
+
+a {
+  cursor: none !important;
 }
 </style>

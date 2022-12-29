@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@luxdamore/vue-cursor-fx": "^1.6.2",
     "core-js": "^3.6.5",
     "firebase": "^9.0.1",
     "vue": "^2.6.11",

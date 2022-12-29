@@ -1,10 +1,12 @@
 <template>
-  <v-container fluid>
+  <div>
+  <!-- <v-container> -->
     <my-intro />
     <about-me />
     <my-portfolio />
     <!-- <contact-me /> -->
-  </v-container>
+  <!-- </v-container> -->
+  </div>
 </template>
 
 //

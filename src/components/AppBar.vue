@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid id="app-bar">
+  <v-container id="app-bar">
     <v-app-bar
       height="100px"
       style="box-shadow:0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);"
@@ -10,7 +10,7 @@
       <v-row>
         <v-col offset-sm="1" md="1" sm="2" cols="2">
           <!-- <router-link to="/"> -->
-          <a href="#my-intro" v-smooth-scroll>
+          <a href="#" data-cursor-hover v-smooth-scroll>
             <div style="width:70px; height:70px" class="links">
               <v-img
                 max-height="100%"
@@ -36,10 +36,10 @@
           <!-- <router-link to="/about-me" v-smooth-scroll class="links">
             ABOUT ME
           </router-link> -->
-          <a href="#about-me" v-smooth-scroll class="links"> ABOUT ME</a>
-          <a href="#my-portfolio" v-smooth-scroll class="links"> PORTFOLIO</a>
-          <a href="#the-footer" v-smooth-scroll class="links"> CONTACT</a>
-          <a href="#" v-smooth-scroll class="links"> SIGN IN</a>
+          <a href="#about-me" data-cursor-hover v-smooth-scroll class="links"> ABOUT ME</a>
+          <a href="#my-portfolio" data-cursor-hover v-smooth-scroll class="links"> PORTFOLIO</a>
+          <a href="#the-footer" data-cursor-hover v-smooth-scroll class="links"> CONTACT</a>
+          <a href="#" data-cursor-hover v-smooth-scroll class="links"> SIGN IN</a>
 
           <!-- <router-link to="/blogs" class="links">
             PORTFOLIO
@@ -190,7 +190,7 @@ export default {
 }
 
 .menu-icon {
-  cursor: pointer;
+  // cursor: pointer;
   position: absolute;
   top: 20px;
   right: 30px;
@@ -236,7 +236,7 @@ export default {
 .links {
   font-size: 16px;
   font-weight: 500;
-  cursor: pointer;
+  // cursor: pointer;
   // padding: 1rem 2rem;
   text-decoration: none;
   margin: 0px 20px;
@@ -247,6 +247,7 @@ export default {
 
   &:hover,
   &:focus {
+    cursor: none;
     border-bottom-color: $yellow;
     color: $yellow;
   }
@@ -263,7 +264,7 @@ export default {
 .f1 {
   font-size: 24px;
   font-weight: 500;
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     margin-top: 15px !important;
     margin-bottom: 0px !important;
   }
@@ -273,7 +274,7 @@ export default {
   font-weight: 400;
   display: flex;
   align-items: center;
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     font-size: 14px;
     font-weight: 500;
     margin: 0px 0px 25px 15px !important;
@@ -283,7 +284,7 @@ export default {
 .f3 {
   font-size: 12px;
   font-weight: 400;
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     margin-top: 15px !important;
     margin-bottom: 0px !important;
   }

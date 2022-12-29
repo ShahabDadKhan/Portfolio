@@ -4,7 +4,7 @@
       <div class="back-icon">
             <v-icon @click="$router.go(-1)">mdi-arrow-top-right-thin</v-icon>
       </div>
-      <v-col class="text-center brief-div">
+      <v-col class="text-center">
           <h1 class="my-2">Brief About Myself</h1>
         </v-col>
       <v-col cols="12" class="text-center">
@@ -124,16 +124,21 @@ export default {
   width: 100%;
   height: 100%;
   opacity: 0.2;
-  background-image: url('../assets/Img/Background/desktop.jpg');
+  background-image: url('../assets/Img/Background/desktop1.jpg');
+
+  @media (max-width: 360px) {
+    background-size: contain;
+    background-image: url('../assets/Img/Background/mobile1.jpg');
+  }
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.brief-div {
-  max-width: 85%;
-}
+// .brief-div {
+//   max-width: 85%;
+// }
 
 .back-icon {
     display: flex;
@@ -144,7 +149,8 @@ export default {
         transform: rotate(-135deg);
 
         &:hover {
-            cursor: pointer;
+            // cursor: pointer;
+            color: $yellow;
         }
     }
 }
@@ -225,7 +231,7 @@ h3 {
   }
 
   span:hover {
-    cursor: pointer;
+    // cursor: pointer;
     color: $yellow;
 
     .v-icon {

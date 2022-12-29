@@ -3,7 +3,7 @@
     <v-row class="mb-16" align="center" justify="center">
       <v-col cols="12" class="text-center">
         <h1 class="my-2">ABOUT ME</h1>
-        <h3 class="mb-10">
+        <h3>
           If you’re <span class="span-2">wondering</span> who I am…
         </h3>
         <p class="my-5">
@@ -21,7 +21,7 @@
           <span class="span-1"> never settle.</span>
         </p>
 
-        <h3 class="mt-15 my-10">
+        <h3>
           My current <span class="span-1"> TOOLS </span> are: <br />
         </h3>
         <span class="span-3"
@@ -30,7 +30,7 @@
             <li v-for="(icon, index ) in icons1" :key="index">
               <v-tooltip top>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-icon v-bind="attrs"
+                  <v-icon data-cursor-hover v-bind="attrs"
                     v-on="on" :class="icon.color">mdi-{{ icon.name }}</v-icon>
                 </template>
                 <span>{{ icon.tooltip }}</span>
@@ -42,7 +42,7 @@
             <li v-for="(icon, index ) in icons2" :key="index">
               <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-icon v-bind="attrs"
+                  <v-icon data-cursor-hover v-bind="attrs"
                     v-on="on" :class="icon.color">mdi-{{ icon.name }}</v-icon>
                 </template>
                 <span>{{ icon.tooltip }}</span>
@@ -54,9 +54,9 @@
           </span>
           <div class="know-more">
             <span>
-              <router-link to="/about-shahab">
+              <router-link data-cursor-hover to="/about-shahab">
               Know More
-              <v-icon>mdi-arrow-top-right-thin</v-icon>
+              <v-icon >mdi-arrow-top-right-thin</v-icon>
               </router-link>
             </span>
           </div>
@@ -146,10 +146,10 @@ p {
   font-weight: 300;
   line-height: 1.8;
 
-  @media (max-with: 400px) {
+  @media (max-width: 400px) {
     font-size: 16px;
     font-weight: 200;
-    line-height: 1;
+    line-height: 1.6;
   }
 }
 h1 {
@@ -158,8 +158,8 @@ h1 {
   font-weight: 600;
   color: $yellow;
 
-  @media (max-with: 400px) {
-    font-size: 12px !important;
+  @media (max-width: 400px) {
+    font-size: 30px;
   }
 }
 
@@ -167,16 +167,23 @@ h3 {
   font-family: Poppins;
   font-size: 20px;
   font-weight: 400;
+  margin:60px 0px 40px 0px;
 
-  @media (max-with: 400px) {
+  @media (max-width: 400px) {
     font-size: 16px;
     font-weight: 300;
+    margin: 25px 0px;
   }
 }
 
 .know-more {
   text-align: right;
   margin-top: 15px;
+
+  @media (max-width:400px) {
+    text-align: center;
+    margin-top: 25px;
+  }
 
   .v-icon {
     color: white;
@@ -194,7 +201,7 @@ h3 {
     }
     
     &:hover {
-    cursor: pointer;
+    // cursor: pointer;
     color: $yellow;
 
     .v-icon {
@@ -211,6 +218,10 @@ h3 {
   display: flex;
   justify-content: center;
 
+  @media (max-width: 400px) {
+    padding: 0px;
+  }
+
   &:last-child {
     margin-top: 25px;
   }
@@ -219,8 +230,13 @@ h3 {
     margin: 0px 10px;
     font-size: 40px;
 
+    @media (max-width: 400px) {
+      font-size: 28px;
+      margin: 0px 5px;
+  }
+
     &:hover{
-      cursor: pointer;
+      // cursor: pointer;
 
       animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
       transform: translate3d(0, 0, 0);
