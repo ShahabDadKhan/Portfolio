@@ -6,7 +6,8 @@ import AboutMe from "../views/AboutMe.vue";
 import MyIntro from "../views/MyIntro.vue";
 import MyPortfolio from "../views/MyPortfolio.vue";
 import SignIn from "../views/SignIn.vue";
-import BriefAboutMyself from "../pages/BriefAboutMyself.vue"
+import BriefAboutMyself from "../pages/BriefAboutMyself.vue";
+import MyProjects from "../pages/MyProjects.vue"
 
 
 Vue.use(VueRouter);
@@ -67,15 +68,27 @@ const routes = [
     meta: {
       title: 'About Shahab'
     }
+  },
+  {
+    path:'/my-projects',
+    name: 'MyProjects',
+    component: MyProjects,
+    meta: {
+      title: 'Projects'
+    }
   }
 ];
 
 const router = new VueRouter({
   routes,
-});
+  scrollBehavior(){
+      document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
+   }
+  });
 
 router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title} | Portfolio `;
+ 
   next();
 });
 

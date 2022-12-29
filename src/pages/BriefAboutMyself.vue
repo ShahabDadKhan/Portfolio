@@ -1,13 +1,13 @@
 <template>
   <v-container id="my-self">
     <v-row class="mb-16" align="center" justify="center">
+      <div class="back-icon">
+            <v-icon @click="$router.go(-1)">mdi-arrow-top-right-thin</v-icon>
+      </div>
+      <v-col class="text-center brief-div">
+          <h1 class="my-2">Brief About Myself</h1>
+        </v-col>
       <v-col cols="12" class="text-center">
-        <!-- <h1 class="my-2">ABOUT ME</h1>
-        <h3 class="mb-10">
-          If you’re <span class="span-2">wondering</span> who I am…
-        </h3> -->
-        <!-- <p> -->
-        <!-- </p> -->
         <p class="my-5">
           <span class="span-2">
           In my college I came across programming world
@@ -17,7 +17,6 @@
           some small projects with HTML & CSS which I myself never looked back
           to. I wasn’t learning much and improving, I felt stuck. <br />
         </p>
-
         <p class="my-5">
           After my college degree in <span class="span-2">"Mathematics"</span>,
           I gave my full preference to coding & learning about it. I started my
@@ -53,7 +52,6 @@
               The Complete JavaScript Course 2021: From Zero to Expert!</a
             >
           </span>
-
           there I quickly started to
           <span class="span-1">love Javascript</span> , Which then I finally
           landing on
@@ -77,41 +75,20 @@
           bunch of <span class="span-2"> personal projects </span> with the
           knowledge I gathered from the courses, google, youtube and people around me, you can check them on my
           <span class="span-2"> portfolio.</span>
-          <!-- <br />
-         
+        </p>
 
-          In my spare time, I like to play
-          <span class="span-2"> Football</span>,
-          <span class="span-2"> Cricket</span> and
-          <span class="span-2">Read Books</span> -->
+        <p>
+         <span class="span-2">How do I take on my work?</span> <br>
+         I'm honest, fair, active listener, open communicator and accountable who
+         Work cooperatively and treat clients and coworkers with respect and dignity while valuing individual differences, encouraging new ideas and sharing information. <br>
+         <!-- <span class="span-2">Commitment</span> to excellence - Demonstrate commitment to being creative, innovative, flexible and adaptable, focusing on quality solutions, continually improving and being a winner. -->
         </p>
 
         <p class="my-5">
-          Apart from my work, I spend time playing <span class="span-2"> Football</span>, <span class="span-2">Adventure traveling</span>, 
+          <span class="span-2">Do I only code?</span> <br>
+          <span class="span-2">No,</span> Apart from my work, I spend time playing <span class="span-2"> Football</span>, <span class="span-2">Adventure traveling</span>, 
           <span class="span-2">Watching podcasts</span>, and doing day-to-day life activities.
         </p>
-        <!-- <p>
-          I always want to <span class="span-2"> learn more </span>, do more,
-          and <span class="span-2"> be more.</span> I’m also a firm
-          <span class="span-2"> believer </span>that we should
-          <span class="span-1"> never settle.</span>
-        </p> -->
-
-        <!-- <h3 class="my-10">
-          My current <span class="span-1"> TOOLS </span> are: <br />
-        </h3> -->
-        <!-- <span class="span-3"
-          >HTML - CSS/SASS/LESS - JAVASCRIPT - VUEJS - VUETIFY/BOOTSTRAP - GITHUB.
-          <br> Basic knowledge of REACT - NODEJS - TYPESCRIPT - TAILWIND - NUXT - FIREBASE.
-          </span>
-          <div class="know-more">
-            <span>
-              <router-link to="/about-shahab">
-              Know More
-              <v-icon>mdi-arrow-top-right-thin</v-icon>
-              </router-link>
-            </span>
-          </div> -->
       </v-col>
     </v-row>
   </v-container>
@@ -138,10 +115,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-// .container {
-//   background-image: url('../assets/Img/Background/Batman\ HD\ Wallpaper\ Background\ Image\ 1920x1080\ ID72397.jpg');
-// }
 .container:before {
   content: ' ';
   display: block;
@@ -152,14 +125,29 @@ export default {
   height: 100%;
   opacity: 0.2;
   background-image: url('../assets/Img/Background/desktop.jpg');
-
-  // background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
   background-attachment: fixed;
 }
 
+.brief-div {
+  max-width: 85%;
+}
+
+.back-icon {
+    display: flex;
+
+    .v-icon {
+        font-size: 50px;
+        color: white;
+        transform: rotate(-135deg);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
 
 .span-1 {
   background-color: $yellow;
@@ -180,7 +168,6 @@ export default {
 }
 
 .span-3 {
-  //   margin: 50px 0px;
   font-family: Poppins;
   font-size: 30;
   font-weight: 600;
@@ -214,7 +201,6 @@ h1 {
 
   @media (max-with: 400px) {
     font-size: 12px !important;
-    // font-weight: 00;
   }
 }
 

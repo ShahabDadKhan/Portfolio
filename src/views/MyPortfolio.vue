@@ -2,14 +2,57 @@
   <v-container id="my-portfolio" class="my-16">
     <v-row class="mb-16">
       <v-col class="text-center">
-        <h1 class="my-2">PORTFOLIO</h1>
-        <h3 class="mb-10">
-          Check <span class="span-2">what</span> I've been doing
-          <span class="span-2">lately</span>
+        <h1 class="my-2">WORK EXPERIENCE</h1>
+        <h3>
+           <span class="span-2">GREENHONCHOS </span> SOLUTIONS PVT LTD <br>
+          <span class="span-2">2021 - Present</span>
         </h3>
       </v-col>
     </v-row>
-    <v-row
+    <v-row>
+      <v-col class="border">
+        <div class="project-div">
+          <span class="span-2 logo-div"><img src="../assets/Img/Project/jioLogo.svg" alt=""> JIOMART ASP</span>
+          <p class="p-border">Designed and Developed various functionality such as checkout
+             journey, order tracking, pre-order, and many more in the Jiomart
+             Assisted Sales Platform.</p>
+        </div>
+        <div>
+          <span class="span-2 logo-div"><img src="../assets/Img/Project/Jmd App Icon-01.png" alt=""> JIOMART DIGITAL MARKITING WEBSITE</span>
+          <p>
+             Developed cancel and return flow of orders from scratch, built refund
+             transaction and other related pages.
+          </p>
+        </div>
+      </v-col>
+      <v-col>
+        <div class="project-div">
+          <span class="span-2 logo-div"><img src="../assets/Img/Project/bpl-logo.svg" alt=""> BPL</span>
+          <p class="p-border">
+             Built Contact-Us form, FAQ page and configured the website from
+             the platform to keep it dynamic. Expand Features, refine code,
+             resolve bugs in the website and move the website to production.
+          </p>
+        </div>
+        <div>
+          <span class="span-2 logo-div"><img src="../assets/Img/Project/Kelvinator Logo (Blue on White)-01.jpg" alt=""> KELVINATOR</span>
+          <p>
+            Build the theme from scratch, navbar, most viewed section using vue slick carousel, made it compatible on web, tablet and mobile phones.
+          </p>
+        </div>
+      </v-col>
+    </v-row>
+    <!-- <v-row> -->
+      <div class="know-more">
+            <span>
+              <router-link to="/my-projects">
+              Explore Personal Projects
+              <v-icon>mdi-arrow-top-right-thin</v-icon>
+              </router-link>
+            </span>
+      </div>
+    <!-- </v-row> -->
+    <!-- <v-row
       :post="post"
       v-for="(post, index) in projects"
       :key="index"
@@ -34,20 +77,20 @@
             </v-btn>
           </div>
         </div>
-      </v-col>
-      <v-col
+      </v-col> -->
+      <!-- <v-col
         class="pa-0 blog-image d-flex justify-center align-center"
         :order-sm="post.number % 2 == 0 ? 2 : 1"
         sm="7"
         cols="12"
-      >
+      > -->
         <!-- <v-img
           height="100%"
           width="100%"
           :src="require(`../assets/Img/Project/${post.photo}.png`)"
           alt=""
         /> -->
-        <v-hover v-slot="{ hover }">
+        <!-- <v-hover v-slot="{ hover }">
           <v-card
             class="ma-5 d-flex align-center"
             style="cursor:pointer"
@@ -70,9 +113,9 @@
               </v-expand-transition>
             </v-img>
           </v-card>
-        </v-hover>
-      </v-col>
-    </v-row>
+        </v-hover> -->
+      <!-- </v-col> -->
+    <!-- </v-row> -->
   </v-container>
 </template>
 
@@ -132,8 +175,42 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+img {
+  width: 60px;
+  margin-right: 15px;
+}
+
+.border {
+      border-right: 1px solid white;
+      margin-right: 20px;
+}
+
+.row {
+gap: 40px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+
+  width: auto;
+  padding-right: 60px;
+
+  // &:first-child {
+  //   border-right: 1px solid white;
+  //   margin-right: 20px;
+  // }
+}
+
 .v-card {
   border: 1px solid $yellow;
+}
+
+.logo-div {
+  display: flex;
+  align-items: center;
 }
 
 .link {
@@ -154,6 +231,37 @@ export default {
     // animation: linkBorder 2s 1;
   }
 }
+
+.know-more {
+  text-align: right;
+  margin-top: 40px;
+
+  .v-icon {
+    color: white;
+    transform: rotate(45deg);
+  }
+
+  span {
+    a {
+      text-decoration: none;
+      color: $white;
+      
+      &:hover {
+        color: $yellow;
+      }
+    }
+    
+    &:hover {
+    cursor: pointer;
+    color: $yellow;
+
+    .v-icon {
+      color: $yellow;
+      transform: rotate(0deg);
+    }
+  }
+ }
+}
 // @keyframes linkBorder {
 //   0% {
 //     // width: 0%;
@@ -172,12 +280,19 @@ export default {
 
 //   //   margin-bottom: 24px;
 // }
+// .p-border {
+//   border-bottom: 1px solid white;
+//   padding-bottom: 16px;
+// }
 p {
+  width: 80%;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.7;
-  text-align: center;
-  width: 70%;
+  text-align: left;
+  margin-top: 16px;
+
+
   @media (max-width: 600px) {
     // text-align: center;
     width: 100% !important;
@@ -213,9 +328,9 @@ p {
   }
 }
 
-.col {
-  padding: 0px;
-}
+// .col {
+//   padding: 0px;
+// }
 
 h1 {
   font-family: Quicksand;
