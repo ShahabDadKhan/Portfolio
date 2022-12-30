@@ -5,7 +5,7 @@
       <v-col class="d-flex flex-column justify-center align-center text-center">
         <img src="../assets/Img/SDK-blackSmall.jpg">
         <h1>SHAHAB DAD KHAN</h1>
-        <h4>WEB DEVELOPER</h4>
+        <h4>SOFTWARE DEVELOPER</h4>
         <p class="mt-8">COPYRIGHT&copy;2023,SHAHAB</p>
       </v-col>
     </v-row>
@@ -28,9 +28,16 @@ export default {
     flex-direction: column;
   }
 }
-.img {
-  // cursor: pointer !important;
-  width: 100%;
+img {
+  width: 250px;
+
+  @media (max-width: 768px) {
+    width: 200px;
+  }
+
+  @media (max-width: 400px) {
+    width: 150px;
+  }
 }
 
 .row:first-child {

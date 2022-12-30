@@ -11,7 +11,7 @@
         <h3 class="my-10">
           If you want to <span class="span-2">talk</span>, you can
           <span class="span-2">find me</span> at: <br />
-          shahabkhandev@gmail.com
+         <span class="span-2">shahabkhandev@gmail.com</span>
         </h3>
         <!-- <p>shahabkhan681@gmail.com</p> -->
         <!-- <div class="divResume">
@@ -20,7 +20,18 @@
           </a>
         </div> -->
         <div class="social-media">
-          <v-btn
+          <ul class="icons-list">
+            <li v-for="(icon, index ) in icons" :key="index">
+              <v-tooltip top>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-icon data-cursor-hover v-bind="attrs"
+                    v-on="on" :class="icon.color">mdi-{{ icon.name }}</v-icon>
+                </template>
+                <span>{{ icon.tooltip }}</span>
+               </v-tooltip>
+            </li>
+          </ul>
+          <!-- <v-btn
             small
             fab
             href="https://github.com/ShahabDadKhan?tab=repositories"
@@ -36,12 +47,6 @@
           </v-btn>
           <v-btn small fab href="https://twitter.com/ShahabDadKhan">
             <v-icon data-cursor-hover large>mdi-twitter</v-icon>
-          </v-btn>
-          <!-- <v-btn small fab href="https://www.instagram.com/shahabdadkhan/">
-            <v-icon large>mdi-instagram</v-icon>
-          </v-btn> -->
-          <!-- <v-btn fab href="https://touch.facebook.com/shahab.khan.1800">
-            <v-icon large>mdi-facebook</v-icon>
           </v-btn> -->
         </div>
       </v-col>
@@ -55,6 +60,11 @@ export default {
     return {
       a: 0,
       b: 1,
+      icons:[
+        {name:'linkedin',color:'linkedin',tooltip:'Linkedin'},
+        {name:'github',color:'github',tooltip:'Github'},
+        {name:'twitter',color:'twitter',tooltip:'Twitter'},
+      ],
     };
   },
   // created: {
@@ -101,29 +111,33 @@ export default {
     color: $yellow;
   }
 }
-.v-btn {
-  background-color: black !important;
-  color: white;
-  // margin: 0px 20px 0px 0px;
+// .v-btn {
+//   background-color: black !important;
+//   color: white;
+//   // margin: 0px 20px 0px 0px;
 
-  @media (max-width: 400px) {
-    margin: 0px 1px 0px 0px;
-  }
+//   @media (max-width: 400px) {
+//     margin: 0px 1px 0px 0px;
+//   }
 
-  &:hover {
-    color: $yellow;
-  }
+//   &:hover {
+//     color: $yellow;
+//   }
 
-  &:nth-of-type(5) {
-    margin: 0px 0px 0px 0px;
-  }
-}
+//   &:nth-of-type(5) {
+//     margin: 0px 0px 0px 0px;
+//   }
+// }
 
 h1 {
   font-family: Quicksand;
   font-size: 42px;
   font-weight: 600;
   color: $yellow;
+
+  @media (max-width: 400px) {
+    font-size: 30px;
+  }
 }
 
 h3 {
@@ -141,6 +155,72 @@ h3 {
 
 .span-2 {
   font-weight: 600;
+}
+
+.icons-list {
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 400px) {
+    padding: 0px;
+  }
+
+  &:last-child {
+    margin-top: 25px;
+
+    @media (max-width: 400px) {
+      margin-top: 0px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .v-icon.v-icon {
+    margin: 0px 10px;
+    font-size: 40px;
+
+    @media (max-width: 400px) {
+      font-size: 28px;
+      margin: 0px 2px;
+  }
+
+    &:hover{
+      // cursor: pointer;
+
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(0, 0, 0);
+      perspective: 1000px;
+    }
+
+    @keyframes shake {
+      10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+      
+      30%, 50%, 70% {
+        transform: translate3d(-2px, 0, 0);
+      }
+      40%, 60% {
+        transform: translate3d(2px, 0, 0);
+      } 
+    }
+  }
+}
+
+.github {
+  color: $white;
+}
+
+.linkedin {
+  color: #126d9f;
+}
+
+.twitter {
+  color: #00acee;
 }
 
 // p {

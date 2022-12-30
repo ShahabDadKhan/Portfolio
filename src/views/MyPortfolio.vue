@@ -1,6 +1,6 @@
 <template>
-  <v-container id="my-portfolio" class="my-16">
-    <v-row class="mb-16">
+  <v-container id="my-portfolio" class="mb-16">
+    <v-row>
       <v-col class="text-center">
         <h1 class="my-2">WORK EXPERIENCE</h1>
         <h3>
@@ -175,6 +175,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  height: 100vh;
+
+  @media (max-width: 400px) {
+    height: auto;
+  }
+}
+
+.portfolio-row {
+  // margin: 64px 0px;
+
+  @media (max-width: 400px) {
+    margin: 0px 0px 40px 0px;
+  }
+}
+
 img {
   width: 60px;
   margin-right: 15px;
@@ -187,24 +208,38 @@ img {
 .border {
       border-right: 1px solid white;
       margin-right: 20px;
+
+      @media (max-width: 400px) {
+        border-right: none;
+        margin-right: 0px;
+      }
+}
+
+.margin-b {
+  margin-bottom: 64px; 
+
+  @media (max-width: 400px) {
+      margin: 0px;
+  }
 }
 
 .row {
-gap: 40px;
+  gap: 40px;
+  flex: none;
 }
 
 .col {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 50px;
+  // justify-content: space-between;
+  gap: 25px;
 
   width: auto;
-  padding-right: 60px;
+  // padding-right: 60px;
 
-  @media (max-width: 400px) {
-    padding-right: 0px;
-  }
+  // @media (max-width: 400px) {
+  //   padding-right: 0px;
+  // }
 
   // &:first-child {
   //   border-right: 1px solid white;
@@ -243,6 +278,10 @@ gap: 40px;
 .know-more {
   text-align: right;
   margin-top: 40px;
+
+  @media (max-width:400px) {
+    text-align: center;
+  }
 
   .v-icon {
     color: white;
@@ -345,6 +384,10 @@ h1 {
   font-size: 42px;
   font-weight: 600;
   color: $yellow;
+
+  @media (max-width: 400px) {
+    font-size: 30px;
+  }
 }
 
 h2 {
@@ -364,7 +407,17 @@ h3 {
   font-size: 20px;
   font-style: italic;
   font-weight: 400;
-  // color: $yellow;
+  margin: 40px 0px;
+
+  @media (max-width: 768px) {
+    margin: 25px 0px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 16px;
+    font-weight: 300;
+    margin:0px;
+  }
 }
 
 .span-2 {

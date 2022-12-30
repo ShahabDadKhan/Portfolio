@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <app-bar v-if="isShow"/>
+    <app-bar/>
       <v-main>
         <router-view />
       </v-main>

@@ -196,7 +196,7 @@ a {
 
 .row {
   height: 95%;
-  padding-bottom: 10%;
+  // padding-bottom: 10%;
 }
 
 .home-text-1 {

@@ -1,6 +1,6 @@
 <template>
-    <v-container id="my-portfolio" class="my-16">
-      <v-row class="mb-16">
+    <v-container id="my-portfolio">
+      <v-row class="portfolio-row">
         <div class="back-icon">
             <v-icon @click="$router.go(-1)">mdi-arrow-top-right-thin</v-icon>
         </div>
@@ -16,7 +16,7 @@
         :post="post"
         v-for="(post, index) in projects"
         :key="index"
-        class="my-10"
+        class="project-row"
       >
         <v-col
           class="d-flex justify-center align-center blog-content"
@@ -67,7 +67,7 @@
                     class="d-flex flex-column transition-fast-in-fast-out yellow text-center v-card--reveal"
                     style="height: 100%;"
                   >
-                    <p class="pa-3">{{ post.details }}</p>
+                    <p class="pa-3 info-p">{{ post.details }}</p>
                   </div>
                 </v-expand-transition>
               </v-img>
@@ -134,6 +134,18 @@
   </script>
   
   <style lang="scss" scoped>
+
+  .container {
+
+    @media (max-width: 400px) {
+      margin:0px;
+    }
+  }
+
+  a {
+    cursor: none;
+  }
+
 .container:before {
   content: ' ';
   display: block;
@@ -150,6 +162,12 @@
   background-attachment: fixed;
 }
 
+.info-p {
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+}
+
   .v-card {
     border: 1px solid $yellow;
   }
@@ -158,6 +176,7 @@
     display: flex;
 
     .v-icon {
+        cursor: none;
         font-size: 50px;
         color: white;
         transform: rotate(-135deg);
@@ -165,6 +184,17 @@
         &:hover {
             color: $yellow;
         }
+    }
+
+    @media (max-width: 400px) {
+      display: none;
+    }
+  }
+
+  .project-row {
+
+    @media (max-width: 400px) {
+      margin-bottom: 0px;
     }
   }
   
@@ -192,28 +222,31 @@
     text-align: center;
     width: 70%;
     @media (max-width: 768px) {
-      // text-align: center;
       width: 100% !important;
-      font-size: 12px;
+      font-size: 18px;
       font-weight: 300;
       line-height: 1;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 20px;
     }
   }
   .content {
     display: flex;
     flex-direction: column;
-    // padding: 0px 0px 0px 50px;
-    // text-align: left;
     align-items: center;
     justify-content: center;
+
     @media (max-width: 768px) {
       padding: 60px 10px;
       text-align: center;
       width: 100% !important;
     }
-  
-    // align-items: ;
-    // background-color: white;
+
+    @media (max-width: 400px) {
+      padding: 10px 10px 40px 10px;
+    }
   }
   .blog-content {
     @media (max-width: 1400px) {

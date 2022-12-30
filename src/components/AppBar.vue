@@ -10,7 +10,7 @@
       <v-row>
         <v-col offset-sm="1" md="1" sm="2" cols="2">
           <!-- <router-link to="/"> -->
-          <a href="#" data-cursor-hover v-smooth-scroll>
+          <a @click="goToHome" href="/" data-cursor-hover v-smooth-scroll>
             <div style="width:70px; height:70px" class="links">
               <v-img
                 max-height="100%"
@@ -151,6 +151,10 @@ export default {
     this.checkScreen();
   },
   methods: {
+    goToHome(){
+      if(this.$route.path != '/')
+      this.$router.push('/');
+    },
     checkScreen() {
       this.windowWidth = window.innerWidth;
       if (this.windowWidth <= 778) {
@@ -161,7 +165,14 @@ export default {
     },
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav;
-      // console.log("Clicked Link");
+      if(this.mobileNav) {
+        const body = document.body;
+        body.style.position = "fixed";
+      } else {
+        const body = document.body;
+        body.style.position = "";
+      }
+        // console.log("Clicked Link");
     },
     // darkMode() {
     //   this.$vuetify.theme.dark = !this.$vuetify.theme.dark;

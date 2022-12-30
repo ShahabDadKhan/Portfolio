@@ -108,6 +108,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+
+  @media (max-width: 400px) {
+    height: auto;
+  }
+}
+
 .span-1 {
   background-color: $yellow;
   color: black;
@@ -169,10 +179,14 @@ h3 {
   font-weight: 400;
   margin:60px 0px 40px 0px;
 
+  @media (max-width: 768px) {
+    margin: 25px 0px;
+  }
+
   @media (max-width: 400px) {
     font-size: 16px;
     font-weight: 300;
-    margin: 25px 0px;
+    // margin: 25px 0px;
   }
 }
 
@@ -232,7 +246,7 @@ h3 {
 
     @media (max-width: 400px) {
       font-size: 28px;
-      margin: 0px 5px;
+      margin: 0px 2px;
   }
 
     &:hover{

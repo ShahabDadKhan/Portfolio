@@ -144,6 +144,7 @@ export default {
     display: flex;
 
     .v-icon {
+        cursor: none;
         font-size: 50px;
         color: white;
         transform: rotate(-135deg);
@@ -152,6 +153,10 @@ export default {
             // cursor: pointer;
             color: $yellow;
         }
+    }
+
+    @media (max-width: 400px) {
+      display: none;
     }
 }
 
@@ -193,10 +198,10 @@ p {
   font-weight: 300;
   line-height: 1.8;
 
-  @media (max-with: 400px) {
+  @media (max-width: 400px) {
     font-size: 16px;
     font-weight: 200;
-    line-height: 1;
+    line-height: 1.6;
   }
 }
 h1 {
@@ -205,8 +210,9 @@ h1 {
   font-weight: 600;
   color: $yellow;
 
-  @media (max-with: 400px) {
-    font-size: 12px !important;
+  @media (max-width: 400px) {
+    font-size: 30px;
+    margin: 0px;
   }
 }
 
