@@ -1,5 +1,5 @@
 <template>
-    <v-container id="my-portfolio">
+    <v-container id="my-projects">
       <v-row class="portfolio-row">
         <div class="back-icon">
             <v-icon @click="$router.go(-1)">mdi-arrow-top-right-thin</v-icon>
