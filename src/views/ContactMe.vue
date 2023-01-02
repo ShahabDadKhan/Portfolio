@@ -11,7 +11,9 @@
         <h3 class="my-10">
           If you want to <span class="span-2">talk</span>, you can
           <span class="span-2">find me</span> at: <br />
+          <a class="mai-anchor" data-cursor-hover href="mailto:shahabkhandev@gmail.com">
          <span class="span-2">shahabkhandev@gmail.com</span>
+          </a> 
         </h3>
         <!-- <p>shahabkhan681@gmail.com</p> -->
         <!-- <div class="divResume">
@@ -92,6 +94,7 @@ export default {
 
 a {
   text-decoration: none;
+  color: $white !important;
 }
 
 .divResume {
