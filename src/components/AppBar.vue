@@ -38,7 +38,7 @@
           </router-link> -->
           <a href="#about-me" data-cursor-hover v-smooth-scroll class="links"> ABOUT ME</a>
           <a href="#my-portfolio" data-cursor-hover v-smooth-scroll class="links"> PORTFOLIO</a>
-          <a href="#the-footer" data-cursor-hover v-smooth-scroll class="links"> CONTACT</a>
+          <a href="shahabdadkhan.pdf" download data-cursor-hover class="links"> RESUME</a>
           <a href="#" data-cursor-hover v-smooth-scroll class="links"> SIGN IN</a>
 
           <!-- <router-link to="/blogs" class="links">
@@ -96,12 +96,13 @@
           PORTFOLIO</a
         >
         <a
-          href="#contect-me"
+          href="shahabdadkhan.pdf" 
+          download 
           v-smooth-scroll
           @click="toggleMobileNav"
           class="links links-mobile"
         >
-          CONTACT</a
+          RESUME</a
         >
         <a
           href="#"

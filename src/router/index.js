@@ -15,6 +15,7 @@ const routes = [
     component: Home,
     meta: {
       title: "Home",
+      footer: true
     },
   },
   {
@@ -23,6 +24,7 @@ const routes = [
     component: SignIn,
     meta: {
       title: "Sign In",
+      footer: false
     },
   },
   {
@@ -30,7 +32,8 @@ const routes = [
     name: 'AboutShahab',
     component: BriefAboutMyself,
     meta: {
-      title: 'About Shahab'
+      title: 'About Shahab',
+      footer: false
     }
   },
   {
@@ -38,7 +41,8 @@ const routes = [
     name: 'MyProjects',
     component: MyProjects,
     meta: {
-      title: 'Projects'
+      title: 'Projects',
+      footer: false
     }
   }
 ];

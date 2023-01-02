@@ -24,8 +24,10 @@
             <li v-for="(icon, index ) in icons" :key="index">
               <v-tooltip top>
                 <template v-slot:activator="{ on, attrs }">
+                  <a :href="`https://${icon.link }`" target="_blank">
                   <v-icon data-cursor-hover v-bind="attrs"
                     v-on="on" :class="icon.color">mdi-{{ icon.name }}</v-icon>
+                  </a>
                 </template>
                 <span>{{ icon.tooltip }}</span>
                </v-tooltip>
@@ -61,9 +63,9 @@ export default {
       a: 0,
       b: 1,
       icons:[
-        {name:'linkedin',color:'linkedin',tooltip:'Linkedin'},
-        {name:'github',color:'github',tooltip:'Github'},
-        {name:'twitter',color:'twitter',tooltip:'Twitter'},
+        {name:'linkedin',color:'linkedin',tooltip:'Linkedin', link:'www.linkedin.com/in/shahab-dad-khan-10b414208/'},
+        {name:'github',color:'github',tooltip:'Github', link:'github.com/ShahabDadKhan?tab=repositories'},
+        {name:'twitter',color:'twitter',tooltip:'Twitter', link:'twitter.com/ShahabDadKhan'},
       ],
     };
   },
@@ -87,6 +89,11 @@ export default {
   align-items: center;
   width: 50%;
 }
+
+a {
+  text-decoration: none;
+}
+
 .divResume {
   width: 12%;
   display: flex;

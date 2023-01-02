@@ -4,7 +4,7 @@
       <v-main>
         <router-view />
       </v-main>
-    <the-footer/>
+    <the-footer v-show="this.$route.meta.footer"/>
     <cursor-fx color="white" color-hover="#ffc800" allow-on-mobile/>
   </v-app>
 </template>
