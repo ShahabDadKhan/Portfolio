@@ -42,7 +42,6 @@
         </div>
       </v-col>
     </v-row>
-    <!-- <v-row> -->
       <div class="know-more">
             <span>
               <router-link data-cursor-hover to="/my-projects">
@@ -51,71 +50,6 @@
               </router-link>
             </span>
       </div>
-    <!-- </v-row> -->
-    <!-- <v-row
-      :post="post"
-      v-for="(post, index) in projects"
-      :key="index"
-      class="my-10"
-    >
-      <v-col
-        class="d-flex justify-center align-center blog-content"
-        :order-sm="post.number % 2 == 0 ? 1 : 2"
-        sm="5"
-      >
-        <div class="content">
-          <h2>{{ post.name }}</h2>
-          <p>{{ post.info }}</p>
-          <div>
-            <v-btn class="yellow  mr-3" :href="post.linkToApp" rounded>
-              <v-icon class="mr-2">mdi-xml</v-icon>
-              Visit
-            </v-btn>
-            <v-btn :href="post.linkToCode" rounded>
-              <v-icon class="mr-2">mdi-github</v-icon>
-              Source
-            </v-btn>
-          </div>
-        </div>
-      </v-col> -->
-      <!-- <v-col
-        class="pa-0 blog-image d-flex justify-center align-center"
-        :order-sm="post.number % 2 == 0 ? 2 : 1"
-        sm="7"
-        cols="12"
-      > -->
-        <!-- <v-img
-          height="100%"
-          width="100%"
-          :src="require(`../assets/Img/Project/${post.photo}.png`)"
-          alt=""
-        /> -->
-        <!-- <v-hover v-slot="{ hover }">
-          <v-card
-            class="ma-5 d-flex align-center"
-            style="cursor:pointer"
-            width="100%"
-            height="auto"
-          >
-            <v-img
-              width="70%"
-              :aspect-ratio="16 / 9"
-              :src="require(`../assets/Img/Project/${post.photo}.png`)"
-            >
-              <v-expand-transition>
-                <div
-                  v-if="hover"
-                  class="d-flex flex-column transition-fast-in-fast-out yellow text-center v-card--reveal"
-                  style="height: 100%;"
-                >
-                  <p class="pa-3">{{ post.details }}</p>
-                </div>
-              </v-expand-transition>
-            </v-img>
-          </v-card>
-        </v-hover> -->
-      <!-- </v-col> -->
-    <!-- </v-row> -->
   </v-container>
 </template>
 
@@ -189,8 +123,6 @@ export default {
 }
 
 .portfolio-row {
-  // margin: 64px 0px;
-
   @media (max-width: 400px) {
     margin: 0px 0px 40px 0px;
   }
@@ -231,20 +163,8 @@ img {
 .col {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   gap: 25px;
-
   width: auto;
-  // padding-right: 60px;
-
-  // @media (max-width: 400px) {
-  //   padding-right: 0px;
-  // }
-
-  // &:first-child {
-  //   border-right: 1px solid white;
-  //   margin-right: 20px;
-  // }
 }
 
 .v-card {
@@ -259,19 +179,15 @@ img {
 .link {
   width: 140px;
   font-weight: 500;
-  // background-color: red;
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   border-bottom-right-radius: 50px;
   transition: 0.2s ease-in all;
   padding: 0px 4px 4px 0px;
-  @media (max-width: 1400px) {
-    // width: 50%;
-  }
+
   &:hover {
     border-bottom-color: #303030;
-    // animation: linkBorder 2s 1;
   }
 }
 
@@ -299,7 +215,6 @@ img {
     }
     
     &:hover {
-    // cursor: pointer;
     color: $yellow;
 
     .v-icon {
@@ -309,28 +224,6 @@ img {
   }
  }
 }
-// @keyframes linkBorder {
-//   0% {
-//     // width: 0%;
-//     border-bottom-color: #fff;
-//   }
-//   50% {
-//     border-bottom-color: #fff;
-//     // width: 50%;
-//   }
-//   100% {
-//     border-bottom-color: #fff;
-//     // width: 100%;
-//   }
-// }
-// h2 {
-
-//   //   margin-bottom: 24px;
-// }
-// .p-border {
-//   border-bottom: 1px solid white;
-//   padding-bottom: 16px;
-// }
 p {
   width: 80%;
   font-size: 18px;
@@ -341,7 +234,6 @@ p {
 
 
   @media (max-width: 768px) {
-    // text-align: center;
     width: 100%;
     font-size: 16px;
     font-weight: 300;
@@ -351,8 +243,6 @@ p {
 .content {
   display: flex;
   flex-direction: column;
-  // padding: 0px 0px 0px 50px;
-  // text-align: left;
   align-items: center;
   justify-content: center;
   @media (max-width: 768px) {
@@ -360,9 +250,6 @@ p {
     text-align: center;
     width: 100% !important;
   }
-
-  // align-items: ;
-  // background-color: white;
 }
 .blog-content {
   @media (max-width: 1400px) {
@@ -374,10 +261,6 @@ p {
     order: 2;
   }
 }
-
-// .col {
-//   padding: 0px;
-// }
 
 h1 {
   font-family: Quicksand;

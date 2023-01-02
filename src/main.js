@@ -6,7 +6,7 @@ import vuetify from "./plugins/vuetify";
 import VueSmoothScroll from "vue2-smooth-scroll";
 import CursorFx from '@luxdamore/vue-cursor-fx';
 import '@luxdamore/vue-cursor-fx/dist/CursorFx.css';
-// Vue.use(VueSmoothScroll);
+
 Vue.use(VueSmoothScroll, { duration: 1000, updateHistory: false });
 Vue.use(CursorFx);
 
@@ -16,6 +16,5 @@ new Vue({
   router,
   store,
   vuetify,
-  // VueSmoothScroll,
   render: (h) => h(App),
 }).$mount("#app");

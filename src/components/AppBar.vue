@@ -9,7 +9,6 @@
     >
       <v-row>
         <v-col offset-sm="1" md="1" sm="2" cols="2">
-          <!-- <router-link to="/"> -->
           <a @click="goToHome" href="/" data-cursor-hover v-smooth-scroll>
             <div style="width:70px; height:70px" class="links">
               <v-img
@@ -19,7 +18,6 @@
               ></v-img>
             </div>
           </a>
-          <!-- </router-link> -->
         </v-col>
 
         <v-col
@@ -33,26 +31,10 @@
           sm="8"
           cols="12"
         >
-          <!-- <router-link to="/about-me" v-smooth-scroll class="links">
-            ABOUT ME
-          </router-link> -->
           <a href="#about-me" data-cursor-hover v-smooth-scroll class="links"> ABOUT ME</a>
           <a href="#my-portfolio" data-cursor-hover v-smooth-scroll class="links"> PORTFOLIO</a>
           <a href="shahabdadkhan.pdf" download data-cursor-hover class="links"> RESUME</a>
           <a href="#" data-cursor-hover v-smooth-scroll class="links"> SIGN IN</a>
-
-          <!-- <router-link to="/blogs" class="links">
-            PORTFOLIO
-          </router-link> -->
-          <!-- <router-link to="/my-portfolio" class="links">
-            PORTFOLIO
-          </router-link>
-          <router-link to="/contact-me" class="links">
-            CONTACT
-          </router-link>
-          <router-link to="#" class="links">
-            SIGN IN
-          </router-link> -->
         </v-col>
         <v-btn
           class="menu-icon"
@@ -70,13 +52,6 @@
         </v-btn>
       </v-row>
     </v-app-bar>
-    <!-- <div class="menu-icon"> -->
-    <!-- <div class="menu-icon"> -->
-    <!-- <v-icon class="white">mdi-close</v-icon> -->
-    <!-- </div> -->
-    <!-- <v-btn> -->
-    <!-- </v-btn> -->
-    <!-- </div> -->
     <transition name="mobile-nav">
       <ul class="mobile-nav" v-show="mobileNav">
         <a
@@ -112,27 +87,6 @@
         >
           SIGN IN</a
         >
-        <!-- <router-link class="links links-mobile" to="/about-me"> -->
-        <!-- <v-btn @click="toggleMobileNav" target="/contact-me">
-          ABOUT ME
-        </v-btn> -->
-        <!-- <a href="/contact-me" class="links links-mobile"> ABOUT ME</a> -->
-        <!-- </router-link> -->
-        <!-- <router-link
-          class="links links-mobile"
-          @click="toggleMobileNav"
-          to="/my-portfolio"
-          >CONTACT</router-link
-        >
-        <router-link
-          class="links links-mobile"
-          @click="toggleMobileNav"
-          to="/contact-me"
-          >PORTFOLIO</router-link
-        >
-        <router-link class="links links-mobile" @click="toggleMobileNav" to="#"
-          >SIGN IN</router-link
-        > -->
       </ul>
     </transition>
   </v-container>
@@ -173,12 +127,7 @@ export default {
         const body = document.body;
         body.style.position = "";
       }
-        // console.log("Clicked Link");
     },
-    // darkMode() {
-    //   this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-    //   console.log("Hello");
-    // },
   },
 };
 </script>
@@ -202,7 +151,6 @@ export default {
 }
 
 .menu-icon {
-  // cursor: pointer;
   position: absolute;
   top: 20px;
   right: 30px;
@@ -213,7 +161,6 @@ export default {
 .mobile-nav {
   padding: 20px;
   width: 100%;
-  // max-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -226,33 +173,11 @@ export default {
   z-index: 10;
 }
 
-// .link {
-//   font-size: 16px;
-//   font-weight: 500;
-//   cursor: pointer;
-//   padding: 20px 0;
-//   text-decoration: none;
-//   margin: 0px 20px !important;
-//   // color: map-get($colors, "text");
-//   color: black;
-//   border-bottom: 1px solid transparent;
-//   transition: all 0.2s ease-in;
-
-//   &:hover,
-//   &:focus {
-//     border-bottom-color: $yellow;
-//     color: $yellow;
-//   }
-// }
-
 .links {
   font-size: 16px;
   font-weight: 500;
-  // cursor: pointer;
-  // padding: 1rem 2rem;
   text-decoration: none;
   margin: 0px 20px;
-  // color: map-get($colors, "text");
   color: white;
   border-bottom: 1px solid transparent;
   transition: all 0.2s ease-in;

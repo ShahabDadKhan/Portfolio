@@ -21,10 +21,6 @@ export default {
   data: () => ({
     isShow:true
   }),
-  mounted() {
-    // start it, on mounted, or wherever you want
-    // this.$refs.cursor.start();
-  },
 
   "$route"() {  
       if (this.$route.path == '/') {
@@ -33,20 +29,6 @@ export default {
         this.showMore = false
       }
     },
-
-  // watch: {
-  //   $route() {
-  //     console.log("to from", this.$route);
-  //     // this.show = false
-  //     if(this.$route.path == '/') {
-  //       this.isShow = true
-  //       console.log("true", this.isShow);
-  //     } else {
-  //       this.isShow = false
-  //       console.log("false", this.isShow);
-  //     }
-  //   }
-  // },
 };
 </script>
 

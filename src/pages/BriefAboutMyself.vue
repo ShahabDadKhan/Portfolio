@@ -81,7 +81,6 @@
          <span class="span-2">How do I take on my work?</span> <br>
          I'm honest, fair, active listener, open communicator and accountable who
          Work cooperatively and treat clients and coworkers with respect and dignity while valuing individual differences, encouraging new ideas and sharing information. <br>
-         <!-- <span class="span-2">Commitment</span> to excellence - Demonstrate commitment to being creative, innovative, flexible and adaptable, focusing on quality solutions, continually improving and being a winner. -->
         </p>
 
         <p class="my-5">
@@ -96,21 +95,6 @@
 
 <script>
 export default {
-  computed:{
-    // Instead of updating age and experience again and again each year, created a function for that which will update it automatically.
-    ageCalculator(){
-      let today = new Date();
-      let currentYear = today.getFullYear();
-      let currentAge = currentYear - 1998
-      return currentAge; 
-    },
-    experienceCalculator(){
-      let today = new Date();
-      let currentYear = today.getFullYear();
-      let currentExperience = currentYear - 2021
-      return currentExperience;
-    }
-  }
 };
 </script>
 
@@ -136,10 +120,6 @@ export default {
   background-attachment: fixed;
 }
 
-// .brief-div {
-//   max-width: 85%;
-// }
-
 .back-icon {
     display: flex;
 
@@ -150,7 +130,6 @@ export default {
         transform: rotate(-135deg);
 
         &:hover {
-            // cursor: pointer;
             color: $yellow;
         }
     }
@@ -237,7 +216,6 @@ h3 {
   }
 
   span:hover {
-    // cursor: pointer;
     color: $yellow;
 
     .v-icon {

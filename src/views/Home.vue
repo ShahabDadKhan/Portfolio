@@ -1,18 +1,14 @@
 <template>
   <div>
-  <!-- <v-container> -->
     <my-intro />
     <about-me />
     <my-portfolio />
-    <!-- <contact-me /> -->
-  <!-- </v-container> -->
   </div>
 </template>
 
 //
 <script>
 import AboutMe from "./AboutMe.vue";
-// import ContactMe from "./ContactMe.vue";
 import MyIntro from "./MyIntro.vue";
 import MyPortfolio from "./MyPortfolio.vue";
 export default {
@@ -20,5 +16,3 @@ export default {
 };
 
 </script>
-
-// <style></style>

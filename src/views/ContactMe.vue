@@ -1,5 +1,4 @@
 <template>
-  <!-- <v-container id="contect-me" class="mt-16"> -->
     <v-row>
       <v-col
         class="text-center"
@@ -15,12 +14,6 @@
          <span class="span-2">shahabkhandev@gmail.com</span>
           </a> 
         </h3>
-        <!-- <p>shahabkhan681@gmail.com</p> -->
-        <!-- <div class="divResume">
-          <a href="../assets/Shahab_Resume.pdf" class="btnResume" download>
-            Resume
-          </a>
-        </div> -->
         <div class="social-media">
           <ul class="icons-list">
             <li v-for="(icon, index ) in icons" :key="index">
@@ -35,27 +28,9 @@
                </v-tooltip>
             </li>
           </ul>
-          <!-- <v-btn
-            small
-            fab
-            href="https://github.com/ShahabDadKhan?tab=repositories"
-          >
-            <v-icon data-cursor-hover large>mdi-github</v-icon>
-          </v-btn>
-          <v-btn
-            small
-            fab
-            href="https://www.linkedin.com/in/shahab-dad-khan-10b414208/"
-          >
-            <v-icon data-cursor-hover large>mdi-linkedin</v-icon>
-          </v-btn>
-          <v-btn small fab href="https://twitter.com/ShahabDadKhan">
-            <v-icon data-cursor-hover large>mdi-twitter</v-icon>
-          </v-btn> -->
         </div>
       </v-col>
     </v-row>
-  <!-- </v-container> -->
 </template>
 
 <script>
@@ -71,16 +46,6 @@ export default {
       ],
     };
   },
-  // created: {
-  //   // const fib = (n)=>{
-  //   //   const fibarray=[0.1];
-  //   //   for (var i=2; i<n; i++){
-  //   //     fibarray.push(fibarray[i-2]+fibarray[i-1])
-  //   //   }
-  //   //   return fibarray
-  //   // }
-  //   // console.log(fib(10));
-  // },
 };
 </script>
 
@@ -121,23 +86,6 @@ a {
     color: $yellow;
   }
 }
-// .v-btn {
-//   background-color: black !important;
-//   color: white;
-//   // margin: 0px 20px 0px 0px;
-
-//   @media (max-width: 400px) {
-//     margin: 0px 1px 0px 0px;
-//   }
-
-//   &:hover {
-//     color: $yellow;
-//   }
-
-//   &:nth-of-type(5) {
-//     margin: 0px 0px 0px 0px;
-//   }
-// }
 
 h1 {
   font-family: Quicksand;
@@ -155,7 +103,7 @@ h3 {
   font-size: 20px;
   font-style: italic;
   font-weight: 400;
-  //   color: $yellow;
+
   @media (max-width: 400px) {
     font-size: 16px;
     font-style: italic;
@@ -196,8 +144,6 @@ h3 {
   }
 
     &:hover{
-      // cursor: pointer;
-
       animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
       transform: translate3d(0, 0, 0);
       perspective: 1000px;
@@ -232,14 +178,4 @@ h3 {
 .twitter {
   color: #00acee;
 }
-
-// p {
-//   font-size: 26px;
-//   font-weight: 500;
-//   margin: 60px 0px 30px 0px;
-//   @media (max-width: 300px) {
-//     font-size: 6px;
-//     font-weight: 100;
-//   }
-// }
 </style>

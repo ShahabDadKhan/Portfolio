@@ -40,26 +40,14 @@
         sm="4"
         md="4"
       >
-        <!-- <div style=""> -->
         <v-avatar>
           <v-img src="../assets/Img/photo2.jpg"></v-img>
         </v-avatar>
-        <!-- </div> -->
       </v-col>
     </v-row>
     <v-row justify="center">
-      <!-- <a
-        href="#about-me"
-        v-smooth-scroll
-        class="links"
-        style="text-decoration: none;"
-        data-cursor-hover
-      >
-        <v-icon class="white--text">mdi-transfer-down</v-icon></a
-      > -->
       <a id="goToTop" @click="scrollIntoDiv" data-cursor-hover class="scrollToTop">
-        <v-icon x-large class="white--text">mdi-transfer-up</v-icon></a
-      >
+        <v-icon x-large class="white--text">mdi-transfer-up</v-icon></a>
     </v-row>
   </v-container>
 </template>
@@ -76,11 +64,9 @@ export default {
       if(this.showGoToTop){
         let elem = document.getElementById("app-bar");
         elem.scrollIntoView({behavior: 'smooth'});
-        console.log("scroll into app-bar", this.showGoToTop);
       } else {
         let elem = document.getElementById("about-me");
         elem.scrollIntoView({behavior: 'smooth'});
-        console.log("scroll into about me", this.showGoToTop);
       }
     },
     attachScrollListeners() {
@@ -120,11 +106,9 @@ export default {
       if(value) {
         document.getElementById("goToTop").style.transitionDuration = "0.3s";
         document.getElementById('goToTop').style.transform = "rotate(0deg)";
-        console.log("watch from if", value);
       } else {
         document.getElementById("goToTop").style.transitionDuration = "0.3s";
         document.getElementById('goToTop').style.transform = "rotate(-180deg)";
-        console.log("watch from else", value);
       }
     }
   },
@@ -136,7 +120,6 @@ export default {
   mounted(){
     this.rotateGoToTop(this.showGoToTop)
     this.attachScrollListeners();
-    // this.scrollIntoDiv()
   },
   beforeUnmount() {
       window.removeEventListener("online", this.checkOffline);
@@ -196,11 +179,9 @@ a {
 
 .row {
   height: 95%;
-  // padding-bottom: 10%;
 }
 
 .home-text-1 {
-  // font-family: Montserrat;
   font-size: 62px;
   font-weight: 200;
 
@@ -211,7 +192,6 @@ a {
 
   @media (max-width: 400px) {
     font-size: 32px;
-    // text-align: center;
   }
 }
 
@@ -231,22 +211,14 @@ a {
 
 span {
   color: $yellow;
-  // font-size: ;
   font-weight: 500;
-
-  // @media (max-width: 768px) {
-  //   font-size: 42px;
-  // }
 }
-
-// Only Sliding effects
 
 ul {
   overflow: hidden;
   width: 32%;
   height: 20px;
   @media (max-width: 330px) {
-    // margin: 40px 0px;
     width: 60%;
   }
 }
@@ -280,46 +252,4 @@ ul li span::after {
 ul li {
   list-style: none;
 }
-
-// Typing Animation
-
-// .wrapper ul {
-//   overflow: hidden;
-// }
-
-// ul li {
-//   position: relative;
-//   top: 0;
-//   animation: slide 6s steps(3) infinite;
-// }
-
-// @keyframes slide {
-//   100% {
-//     top: -72px;
-//   }
-// }
-
-// ul li span {
-//   position: relative;
-// }
-
-// ul li span::after {
-//   content: "";
-//   position: absolute;
-//   left: 0;
-//   top: 1px;
-//   height: 100%;
-//   width: 100%;
-//   background: black;
-//   //   overflow: hidden;
-//   border-left: 1px solid $yellow;
-//   animation: typing 2s steps(11) infinite;
-// }
-
-// @keyframes typing {
-//   100% {
-//     left: 100%;
-//     margin: 0 0 0 15px;
-//   }
-// }
 </style>

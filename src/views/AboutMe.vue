@@ -49,8 +49,6 @@
                </v-tooltip>
             </li>
           </ul>
-          <!-- HTML - CSS/SASS/LESS - JAVASCRIPT - VUEJS - VUETIFY/BOOTSTRAP - GITHUB. -->
-          <!-- - NODEJS - TYPESCRIPT - TAILWIND - NUXT - FIREBASE. -->
           </span>
           <div class="know-more">
             <span>
@@ -186,7 +184,6 @@ h3 {
   @media (max-width: 400px) {
     font-size: 16px;
     font-weight: 300;
-    // margin: 25px 0px;
   }
 }
 
@@ -215,7 +212,6 @@ h3 {
     }
     
     &:hover {
-    // cursor: pointer;
     color: $yellow;
 
     .v-icon {
@@ -250,8 +246,6 @@ h3 {
   }
 
     &:hover{
-      // cursor: pointer;
-
       animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
       transform: translate3d(0, 0, 0);
       perspective: 1000px;

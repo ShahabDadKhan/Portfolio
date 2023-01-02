@@ -44,12 +44,6 @@
           sm="7"
           cols="12"
         >
-          <!-- <v-img
-            height="100%"
-            width="100%"
-            :src="require(`../assets/Img/Project/${post.photo}.png`)"
-            alt=""
-          /> -->
           <v-hover v-slot="{ hover }">
             <v-card
               class="ma-5 d-flex align-center"
@@ -201,7 +195,6 @@
   .link {
     width: 140px;
     font-weight: 500;
-    // background-color: red;
     color: inherit;
     text-decoration: none;
     border-bottom: 1px solid transparent;
@@ -212,7 +205,6 @@
     }
     &:hover {
       border-bottom-color: #303030;
-      // animation: linkBorder 2s 1;
     }
   }
   p {
@@ -287,7 +279,6 @@
     font-size: 20px;
     font-style: italic;
     font-weight: 400;
-    // color: $yellow;
   }
   
   .span-2 {
