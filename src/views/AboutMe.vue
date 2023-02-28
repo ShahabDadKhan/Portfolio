@@ -73,16 +73,16 @@ export default {
         {name:'sass',color:'scss',tooltip:'SCSS/SASS/LESS'},
         {name:'language-javascript',color:'javascript',tooltip:'Javascript'},
         {name:'vuejs',color:'vuejs',tooltip:'Vue'},
+        {name:'nuxt',color:'nuxt',tooltip:'Nuxt'},
+        {name:'react',color:'react',tooltip:'React'},
         {name:'vuetify',color:'vuetify',tooltip:'Vuetify'},
         {name:'bootstrap',color:'bootstrap',tooltip:'Bootstrap'},
         {name:'github',color:'github',tooltip:'Github'}
       ],
       icons2:[
-        {name:'react',color:'react',tooltip:'React'},
         {name:'nodejs',color:'nodejs',tooltip:'Node'},
         {name:'language-typescript',color:'typescript',tooltip:'Typescript'},
         {name:'tailwind',color:'tailwind',tooltip:'Tailwind'},
-        {name:'nuxt',color:'nuxt',tooltip:'Nuxt'},
         {name:'firebase',color:'firebase',tooltip:'Firebase'}
       ]
     }
