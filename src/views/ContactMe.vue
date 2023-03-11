@@ -42,7 +42,6 @@ export default {
       icons:[
         {name:'linkedin',color:'linkedin',tooltip:'Linkedin', link:'www.linkedin.com/in/shahab-dad-khan-10b414208/'},
         {name:'github',color:'github',tooltip:'Github', link:'github.com/ShahabDadKhan?tab=repositories'},
-        {name:'twitter',color:'twitter',tooltip:'Twitter', link:'twitter.com/ShahabDadKhan'},
       ],
     };
   },
