@@ -3,61 +3,69 @@
     <v-row class="mb-16" align="center" justify="center">
       <v-col cols="12" class="text-center">
         <h1 class="my-2">ABOUT ME</h1>
-        <h3>
-          If you’re <span class="span-2">wondering</span> who I am…
-        </h3>
+        <h3>If you’re <span class="span-2">wondering</span> who I am…</h3>
         <p class="my-5">
-          I’m <span class="span-1"> Shahab </span> , a {{ ageCalculator }} years old <span class="span-2">self-taught </span>
-          professional <span class="span-1"> Software developer </span> with <span class="span-2">{{experienceCalculator}}+</span> year 
-          experience in developing <span class="span-2">responsive web apps and websites</span>.
-
-          Curious and committed, completing the tasks at hand <span class="span-2">honestly</span>
-          and <span class="span-2">passionately</span>.
+          I’m <span class="span-1"> Shahab </span> , a {{ ageCalculator }}
+          old <span class="span-2">self-taught </span> professional
+          <span class="span-1"> Software developer </span> with
+          <span class="span-2">{{ experienceCalculator }}</span> years of
+          experience in developing
+          <span class="span-2">responsive web apps and websites</span>. <br>
+          Passionate about creating <span class="span-2">seamless</span> user experiences, 
+          committed to completing tasks with <span class="span-2"> honesty</span>.
         </p>
         <p>
-          I always want to <span class="span-2"> learn more </span>, do more,
-          and <span class="span-2"> be more.</span> I’m also a firm
+          Driven by a constant desire to <span class="span-2"> learn more</span>, do more,
+          and <span class="span-2"> be more</span>, always exploring <span class="span-2"> new technologies </span> and embracing challenges. <br> I’m also a firm
           <span class="span-2"> believer </span>that we should
           <span class="span-1"> never settle.</span>
         </p>
 
-        <h3>
-          My current <span class="span-1"> TOOLS </span> are: <br />
-        </h3>
-        <span class="span-3"
-          >
+        <h3>My current <span class="span-1"> TOOLS </span> are: <br /></h3>
+        <span class="span-3">
           <ul class="icons-list">
-            <li v-for="(icon, index ) in icons1" :key="index">
+            <li v-for="(icon, index) in icons1" :key="index">
               <v-tooltip top>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-icon data-cursor-hover v-bind="attrs"
-                    v-on="on" :class="icon.color">mdi-{{ icon.name }}</v-icon>
+                  <v-icon
+                    data-cursor-hover
+                    v-bind="attrs"
+                    v-on="on"
+                    :class="icon.color"
+                    >mdi-{{ icon.name }}</v-icon
+                  >
                 </template>
                 <span>{{ icon.tooltip }}</span>
-               </v-tooltip>
+              </v-tooltip>
             </li>
           </ul>
-          <br> Basic knowledge of <br>
+          <!-- <br /> -->
+          <!-- Basic knowledge of <br /> -->
           <ul class="icons-list">
-            <li v-for="(icon, index ) in icons2" :key="index">
+            <li v-for="(icon, index) in icons2" :key="index">
               <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-icon data-cursor-hover v-bind="attrs"
-                    v-on="on" :class="icon.color">mdi-{{ icon.name }}</v-icon>
+                  <v-icon
+                    data-cursor-hover
+                    v-bind="attrs"
+                    v-on="on"
+                    :class="icon.color"
+                    >mdi-{{ icon.name }}</v-icon
+                  >
                 </template>
                 <span>{{ icon.tooltip }}</span>
-               </v-tooltip>
+              </v-tooltip>
             </li>
           </ul>
-          </span>
-          <div class="know-more">
-            <span>
-              <router-link data-cursor-hover to="/about-shahab">
+        </span>
+        <div class="know-more">
+          <span>
+            <router-link data-cursor-hover to="/about-shahab">
               Know More
-              <v-icon >mdi-arrow-top-right-thin</v-icon>
-              </router-link>
-            </span>
-          </div>
+              <v-icon>mdi-arrow-top-right-thin</v-icon>
+            </router-link>
+          </span>
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -65,43 +73,73 @@
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-      icons1:[
-        {name:'language-html5',color:'html',tooltip:'HTML'},
-        {name:'language-css3',color:'css',tooltip:'CSS'},
-        {name:'sass',color:'scss',tooltip:'SCSS/SASS/LESS'},
-        {name:'language-javascript',color:'javascript',tooltip:'Javascript'},
-        {name:'vuejs',color:'vuejs',tooltip:'Vue'},
-        {name:'nuxt',color:'nuxt',tooltip:'Nuxt'},
-        {name:'react',color:'react',tooltip:'React'},
-        {name:'vuetify',color:'vuetify',tooltip:'Vuetify'},
-        {name:'bootstrap',color:'bootstrap',tooltip:'Bootstrap'},
-        {name:'github',color:'github',tooltip:'Github'}
+      icons1: [
+        { name: "language-html5", color: "html", tooltip: "HTML" },
+        { name: "language-css3", color: "css", tooltip: "CSS" },
+        { name: "sass", color: "scss", tooltip: "SCSS/SASS/LESS" },
+        {
+          name: "language-javascript",
+          color: "javascript",
+          tooltip: "Javascript",
+        },
+        { name: "vuejs", color: "vuejs", tooltip: "Vue" },
+        { name: "nuxt", color: "nuxt", tooltip: "Nuxt" },
+        { name: "react", color: "react", tooltip: "React" },
+        { name: "vuetify", color: "vuetify", tooltip: "Vuetify" },
+        { name: "bootstrap", color: "bootstrap", tooltip: "Bootstrap" },
+        { name: "github", color: "github", tooltip: "Github" },
       ],
-      icons2:[
-        {name:'nodejs',color:'nodejs',tooltip:'Node'},
-        {name:'language-typescript',color:'typescript',tooltip:'Typescript'},
-        {name:'tailwind',color:'tailwind',tooltip:'Tailwind'},
-        {name:'firebase',color:'firebase',tooltip:'Firebase'}
-      ]
-    }
+      icons2: [
+        { name: "nodejs", color: "nodejs", tooltip: "Node" },
+        {
+          name: "language-typescript",
+          color: "typescript",
+          tooltip: "Typescript",
+        },
+        { name: "tailwind", color: "tailwind", tooltip: "Tailwind" },
+        { name: "firebase", color: "firebase", tooltip: "Firebase" },
+      ],
+    };
   },
-  computed:{
-    // Instead of updating age and experience again and again each year, created a function for that which will update it automatically.
-    ageCalculator(){
-      let today = new Date();
-      let currentYear = today.getFullYear();
-      let currentAge = currentYear - 1998
-      return currentAge; 
+  computed: {
+    // Instead of updating age and experience again and again each year, created a computed property which will do the work for me.
+    ageCalculator() {
+      const currentDate = new Date();
+      const start = new Date("1998-04-15");
+
+      // Calculate the difference in years, months, and days
+      let years = currentDate.getUTCFullYear() - start.getUTCFullYear();
+      let months = currentDate.getUTCMonth() - start.getUTCMonth();
+      const days = currentDate.getUTCDate() - start.getUTCDate();
+
+      // Adjust negative months
+      if (months < 0 || (months === 0 && days < 0)) {
+          years--;
+          months += (months < 0) ? 12 : 0;
+      }
+
+      return `${years} years`;
     },
-    experienceCalculator(){
-      let today = new Date();
-      let currentYear = today.getFullYear();
-      let currentExperience = currentYear - 2021
-      return currentExperience;
-    }
-  }
+    experienceCalculator() {
+      const currentDate = new Date();
+      const start = new Date("2021-10-11");
+
+      // Calculate the difference in years and months.
+      let years = currentDate.getUTCFullYear() - start.getUTCFullYear();
+      let months = currentDate.getUTCMonth() - start.getUTCMonth();
+      const days = currentDate.getUTCDate() - start.getUTCDate();
+
+      // Adjust negative months
+      if (months < 0 || (months === 0 && days < 0)) {
+          years--;
+          months += (months < 0) ? 12 : 0;
+      }
+
+      return months == 0 ? `${years}`:`${years}.${months + 1}`;
+    },
+  },
 };
 </script>
 
@@ -109,7 +147,7 @@ export default {
 .container {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
 
   @media (max-width: 400px) {
     height: auto;
@@ -175,7 +213,7 @@ h3 {
   font-family: Poppins;
   font-size: 20px;
   font-weight: 400;
-  margin:60px 0px 40px 0px;
+  margin: 60px 0px 40px 0px;
 
   @media (max-width: 768px) {
     margin: 25px 0px;
@@ -191,7 +229,7 @@ h3 {
   text-align: right;
   margin-top: 15px;
 
-  @media (max-width:400px) {
+  @media (max-width: 400px) {
     text-align: center;
     margin-top: 25px;
   }
@@ -205,21 +243,21 @@ h3 {
     a {
       text-decoration: none;
       color: $white;
-      
+
       &:hover {
         color: $yellow;
       }
     }
-    
-    &:hover {
-    color: $yellow;
 
-    .v-icon {
+    &:hover {
       color: $yellow;
-      transform: rotate(0deg);
+
+      .v-icon {
+        color: $yellow;
+        transform: rotate(0deg);
+      }
     }
   }
- }
 }
 
 .icons-list {
@@ -243,35 +281,39 @@ h3 {
     @media (max-width: 400px) {
       font-size: 28px;
       margin: 0px 2px;
-  }
+    }
 
-    &:hover{
-      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    &:hover {
+      animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
       transform: translate3d(0, 0, 0);
       perspective: 1000px;
     }
 
     @keyframes shake {
-      10%, 90% {
+      10%,
+      90% {
         transform: translate3d(-1px, 0, 0);
       }
-      20%, 80% {
+      20%,
+      80% {
         transform: translate3d(2px, 0, 0);
       }
-      
-      30%, 50%, 70% {
+
+      30%,
+      50%,
+      70% {
         transform: translate3d(-2px, 0, 0);
       }
-      40%, 60% {
+      40%,
+      60% {
         transform: translate3d(2px, 0, 0);
-      } 
+      }
     }
   }
 }
 
-
 .html {
-  color: #FF0000;
+  color: #ff0000;
 }
 
 .css {
@@ -291,7 +333,7 @@ h3 {
 }
 
 .vuetify {
-  color: #2196F3;
+  color: #2196f3;
 }
 
 .bootstrap {
@@ -303,11 +345,11 @@ h3 {
 }
 
 .react {
-  color:#61dbfb ;
+  color: #61dbfb;
 }
 
 .nodejs {
-  color: #3C873A;
+  color: #3c873a;
 }
 
 .typescript {
@@ -315,7 +357,7 @@ h3 {
 }
 
 .tailwind {
-  color:#3490dc ;
+  color: #3490dc;
 }
 
 .nuxt {
@@ -323,6 +365,6 @@ h3 {
 }
 
 .firebase {
-  color: #FFCB2B;
+  color: #ffcb2b;
 }
 </style>

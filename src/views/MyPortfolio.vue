@@ -115,7 +115,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   gap: 25px;
-  height: 100vh;
+  height: 100%;
 
   @media (max-width: 400px) {
     height: auto;
