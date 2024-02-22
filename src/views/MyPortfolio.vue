@@ -4,52 +4,104 @@
       <v-col class="text-center">
         <h1 class="my-2">WORK EXPERIENCE</h1>
         <h3>
-           <span class="span-2">GREENHONCHOS </span> SOLUTIONS PVT LTD <br>
+          <span class="span-2">GREENHONCHOS </span> SOLUTIONS PVT LTD <br />
           <span class="span-2">2021 - Present</span>
         </h3>
       </v-col>
     </v-row>
     <v-row>
       <v-col class="border">
-        <div class="project-div">
-          <span class="span-2 logo-div"><img src="../assets/Img/Project/jioLogo.svg" alt=""> JIOMART ASP</span>
-          <p class="p-border">Designed and Developed various functionality such as checkout
-             journey, order tracking, pre-order, and many more in the Jiomart
-             Assisted Sales Platform.</p>
-        </div>
         <div>
-          <span class="span-2 logo-div"><img src="../assets/Img/Project/Jmd App Icon-01.png" alt=""> JIOMART DIGITAL MARKITING WEBSITE</span>
+          <span class="span-2 logo-div"
+            ><img src="../assets/Img//Project/Manish.png" alt="" /> Manish
+            Malhotra</span
+          >
           <p>
-             Developed cancel and return flow of orders from scratch, built refund
-             transaction and other related pages.
+            Innovated and implemented an automated size selection feature on the
+            Product Display Page (PDP), leveraging user data from past
+            interactions to elevate personalized experiences and streamline the
+            customer journey.
           </p>
+          <v-btn
+            class="yellow  mr-3"
+            href="https://manishmalhotra.in/"
+            target="_blank"
+            rounded
+          >
+            <v-icon class="mr-2">mdi-xml</v-icon>
+            Visit
+          </v-btn>
+        </div>
+
+        <div>
+          <span class="span-2 logo-div"
+            ><img src="../assets/Img/Project/Ritu.png" alt="" /> Ritu
+            Kumar</span
+          >
+          <p>
+            Successfully integrated multicurrency functionality, enhancing its
+            global usability and financial flexibility. A seamless and
+            user-friendly interface that allows users to seamlessly switch
+            between different currencies while maintaining a consistent and
+            visually appealing design.
+          </p>
+          <v-btn
+            class="yellow  mr-3"
+            href="https://shop.testrblsite.in/"
+            target="_blank"
+            rounded
+          >
+            <v-icon class="mr-2">mdi-xml</v-icon>
+            Visit
+          </v-btn>
         </div>
       </v-col>
       <v-col>
         <div class="project-div">
-          <span class="span-2 logo-div"><img src="../assets/Img/Project/bpl-logo.svg" alt=""> BPL</span>
+          <span class="span-2 logo-div"
+            ><img src="../assets/Img/Project/jioLogo.svg" alt="" /> JIOMART
+            ASP</span
+          >
           <p class="p-border">
-             Built Contact-Us form, FAQ page and configured the website from
-             the platform to keep it dynamic. Expand Features, refine code,
-             resolve bugs in the website and move the website to production.
+            Designed and Developed various functionality such as checkout
+            journey, order tracking, pre-order, and many more in the Jiomart
+            Assisted Sales Platform. Developed cancel and return flow of orders
+            from scratch, built refund transaction and other related pages.
           </p>
+          <v-btn class="yellow  mr-3" href="#" rounded>
+            <v-icon class="mr-2">mdi-xml</v-icon>
+            Visit
+          </v-btn>
         </div>
-        <div>
-          <span class="span-2 logo-div"><img src="../assets/Img/Project/Kelvinator Logo (Blue on White)-01.jpg" alt=""> KELVINATOR</span>
-          <p>
-            Build the theme from scratch, navbar, most viewed section using vue slick carousel, made it compatible on web, tablet and mobile phones.
+        <div class="project-div">
+          <span class="span-2 logo-div"
+            ><img src="../assets/Img/Project/bpl-logo.svg" alt="" /> BPL</span
+          >
+          <p class="p-border">
+            Built Contact-Us form, FAQ page and configured the website from the
+            platform to keep it dynamic. Expand Features, refine code, resolve
+            bugs in the website and move the website to production.
           </p>
+          <v-btn
+            class="yellow  mr-3"
+            href="https://bpllimited.com/"
+            target="_blank"
+            rounded
+          >
+            <v-icon class="mr-2">mdi-xml</v-icon>
+            Visit
+          </v-btn>
         </div>
       </v-col>
     </v-row>
-      <div class="know-more">
-            <span>
-              <router-link data-cursor-hover to="/my-projects">
-              Explore Personal Projects
-              <v-icon>mdi-arrow-top-right-thin</v-icon>
-              </router-link>
-            </span>
-      </div>
+    <div class="know-more">
+      <span>
+        <router-link data-cursor-hover to="/my-projects">
+          Explore Personal Projects
+          <v-icon>mdi-arrow-top-right-thin</v-icon>
+        </router-link>
+      </span>
+    </div>
   </v-container>
 </template>
 
@@ -109,7 +161,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .container {
   display: flex;
   flex-direction: column;
@@ -138,32 +189,37 @@ img {
 }
 
 .border {
-      border-right: 1px solid white;
-      margin-right: 20px;
+  border-right: 1px solid white;
+  margin-right: 20px;
 
-      @media (max-width: 400px) {
-        border-right: none;
-        margin-right: 0px;
-      }
+  @media (max-width: 400px) {
+    border-right: none;
+    margin-right: 0px;
+  }
 }
 
 .margin-b {
-  margin-bottom: 64px; 
+  margin-bottom: 64px;
 
   @media (max-width: 400px) {
-      margin: 0px;
+    margin: 0px;
   }
 }
 
 .row {
   gap: 40px;
   flex: none;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .col {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 50px;
   width: auto;
 }
 
@@ -195,7 +251,7 @@ img {
   text-align: right;
   margin-top: 40px;
 
-  @media (max-width:400px) {
+  @media (max-width: 400px) {
     text-align: center;
   }
 
@@ -208,21 +264,21 @@ img {
     a {
       text-decoration: none;
       color: $white;
-      
+
       &:hover {
         color: $yellow;
       }
     }
-    
-    &:hover {
-    color: $yellow;
 
-    .v-icon {
+    &:hover {
       color: $yellow;
-      transform: rotate(0deg);
+
+      .v-icon {
+        color: $yellow;
+        transform: rotate(0deg);
+      }
     }
   }
- }
 }
 p {
   width: 80%;
@@ -231,7 +287,6 @@ p {
   line-height: 1.7;
   text-align: left;
   margin-top: 16px;
-
 
   @media (max-width: 768px) {
     width: 100%;
@@ -299,7 +354,7 @@ h3 {
   @media (max-width: 400px) {
     font-size: 16px;
     font-weight: 300;
-    margin:0px;
+    margin: 0px;
   }
 }
 
