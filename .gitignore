@@ -2,9 +2,9 @@
 node_modules
 /dist
 
-.firebaserc
-firebase.js
-firbase.json
+# .firebaserc
+# firebase.js
+# firbase.json
 
 
 # local env files
