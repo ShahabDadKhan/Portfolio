@@ -100,8 +100,19 @@
               "You can search for any place on the gloab and the task was to capture the image of the map we are looking at and wrap it on cubical box. NOTE:- This app is not mobile responsive, it was required only for web.",
           },
           {
-            name: "Bagels App",
+            name: "Weather",
             number: "3",
+            photo: "weather",
+            linkToApp: "https://weatherapp-87b66.web.app/",
+            linkToCode: "https://github.com/ShahabDadKhan/weatherApp-vue3",
+            info:
+              "I built it using mapbox-gl api and free weather api in vue 3.",
+            details:
+              "You can search for any place on the gloab to see it's weather and forecast. Also you can save the city on home page and remove them according to your own needs",
+          },
+          {
+            name: "Bagels App",
+            number: "4",
             photo: "bagelsApp",
             linkToApp: "https://web-app-903e0.web.app/",
             linkToCode: "https://github.com/ShahabDadKhan/web-app",
@@ -112,7 +123,7 @@
           },
           {
             name: "Blog App",
-            number: "4",
+            number: "5",
             photo: "blogApp",
             linkToApp: "https://blog-web-c957f.web.app/",
             linkToCode: "https://github.com/ShahabDadKhan/blog-website",
