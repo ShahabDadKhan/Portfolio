@@ -78,19 +78,8 @@
       return {
         projects: [
           {
-            name: "Portfolio",
-            number: "1",
-            photo: "portfolioApp",
-            linkToApp: "https://portfolio-7956c.web.app/#/",
-            linkToCode: "https://github.com/ShahabDadKhan/Portfolio",
-            info:
-              "This very website you're now watching. I wanted something fast and good for my portfolio.",
-            details:
-              "This very website you're now watching. It reads data from markdown files, so it's super easy for me to keep adding Portfolio items as I keep developing stuff. Here you can find my works which i did ambitiously during Night & Day.",
-          },
-          {
             name: "Movie App",
-            number: "2",
+            number: "1",
             photo: "movieApp",
             linkToApp: "https://movie-app-5e490.web.app/",
             linkToCode: "https://github.com/ShahabDadKhan/movie-app",
@@ -98,6 +87,17 @@
               "A Movie Library made with VueJs. It fetches information from an API, and displays it in a nice way.",
             details:
               "You get recommended movies based on the one you're watching, and you can also click on an Actor, and check information about him/her as well as movies that same actor enters. it uses Vue Router, and fetches the movie based on the URL, so you can easily reload the page and the data will be still fetched. It also uses lazy loading on images, has error handling, and uses Vuex to manage state. One of the projects I'm most proud of.",
+          },
+          {
+            name: "Capture Map",
+            number: "2",
+            photo: "capture-image",
+            linkToApp: "https://capture-image-7c416.web.app/",
+            linkToCode: "https://github.com/ShahabDadKhan/captureImage",
+            info:
+              "I got this task to build Using React.js, Mapbox-gl and Babylon.js, for the interview assignment for a frontend developer profile at a startup.",
+            details:
+              "You can search for any place on the gloab and the task was to capture the image of the map we are looking at and wrap it on cubical box. NOTE:- This app is not mobile responsive, it was required only for web.",
           },
           {
             name: "Bagels App",
